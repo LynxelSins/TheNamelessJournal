@@ -1,2 +1,5 @@
-# TheNamelessJournal
-Computer Game Development Midterm Project
+# The Nameless Journal
+*Computer Game Development Midterm Project*
+
+*Group 13*
+
