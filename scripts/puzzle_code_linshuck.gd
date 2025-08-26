@@ -92,6 +92,10 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event.is_action_pressed("ui_leftMouseClick"):
 		inv.insert(item)
 		$open/Area2D.visible = false
+		GameStateManager.Office_noteTaken = true
+		
+func noNote():
+	$open/Area2D.visible = false
 		
 func get_current_code():
 	return str(first) + str(second) + str(third) + str(fouth)

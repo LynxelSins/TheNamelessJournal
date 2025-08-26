@@ -1,6 +1,7 @@
 extends Area2D
-
-@export var next_scene : PackedScene
+#not_use anymore, i switch to path instead because 
+#packedscene somehow having problem upon switching back and fouth on the same scene
+@export var next_scene : String = "res://scene/scene_03.tscn"
 var is_door = false
 
 

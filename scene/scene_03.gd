@@ -7,7 +7,7 @@ var is_mouse_held_down_on_shape = false
 @onready var light = $light_mouse/PointLight2D
 @onready var light_player = $CharacterBody2D/PointLight2D2
 @onready var light_door = $PointLight2D2
-@export var next_scene : PackedScene
+@export var next_scene : String
 
 var gate_final_pose = Vector2(1226.0,110.0)
 var open_speed: float = 20 #you determine
@@ -19,8 +19,12 @@ var flicker_delay := 0.08
 
 func _ready() -> void:
 	$CharacterBody2D.is_levelable = true
-	
-
+	if GameStateManager.is_stair_finish:
+		opened_the_gate()
+	if GameStateManager.Stair_From_Scene_4:
+		GameStateManager.Stair_From_Scene_4 = false
+		$CharacterBody2D.position = Vector2(1159.0,663.0)
+		$CharacterBody2D.destination = Vector2(1159.0,663.0)
 #maybe the lever box. idk , ai did this
 func _on_switch_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -79,6 +83,7 @@ func opened_the_gate():
 	light_player.visible = false
 	light_door.visible = false
 	$CanvasModulate.visible = false
+	GameStateManager.is_stair_finish = true
 
 
 
