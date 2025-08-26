@@ -1,11 +1,15 @@
 extends Area2D
 
+
+#hard code, store position that monster supposed to be
 var pos1 = Vector2(952.0,609.0)
 var pos2 = Vector2(667.0,555.0)
 var pos3 = Vector2(335.0,446.0)
 var pos4 = Vector2(533.0,348.0)
 var pos5 = Vector2(759.0,214.0)
 
+
+#array <--- use this one
 var location : Array[Vector2] = [
 	Vector2(952.0, 609.0),
 	Vector2(667.0, 555.0),
@@ -42,7 +46,7 @@ func set_light(status : bool):
 	
 	
 
-
+#handle mosnter movement using timer and random
 func _on_timer_timeout() -> void:
 	# Your random logic now lives here.
 	if randi() % 5 + 1 == 1 and not is_light:
@@ -60,6 +64,8 @@ func _on_timer_timeout() -> void:
 	position = location[curr_pos]
 	#print("Timer ticked! Current Position Index: ", curr_pos)
 	
+	
+#on finsih the minigame. use to disable the monster	
 func finish():
 	$Timer.stop()
 	visible = false
