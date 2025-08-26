@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://bxlqyundks6xy"]
+
+[ext_resource type="Script" uid="uid://715r5ve23vjf" path="res://inventory/inventory_item.gd" id="1_sl6ah"]
+[ext_resource type="Texture2D" uid="uid://b5yshhygpvkad" path="res://assets/Item/Note.png" id="2_f2wor"]
+
+[resource]
+script = ExtResource("1_sl6ah")
+name = "บันทึกที่ 3 \"6210\""
+texture = ExtResource("2_f2wor")
+description = "ข้อความในบันทิก : ถ้าคุณอยากรูได้โปรดไปที่ห้องนั้น \"6210\""
+metadata/_custom_type_script = "uid://715r5ve23vjf"

@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://bkgbtftggp812"]
+
+[ext_resource type="Script" uid="uid://d1dlgtnyyautd" path="res://scripts/player.gd" id="1_b26j0"]
+[ext_resource type="Texture2D" uid="uid://caqt058s6eif1" path="res://assets/charaters/GirlSideR_walkSprite/tile000.png" id="1_dw050"]
+[ext_resource type="Texture2D" uid="uid://bp261t6nshwal" path="res://assets/charaters/GirlSideR_walkSprite/tile001.png" id="2_b26j0"]
+[ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_ml7e8"]
+[ext_resource type="Texture2D" uid="uid://cw6x5sw4ojlx2" path="res://assets/charaters/GirlSideR_walkSprite/tile002.png" id="3_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://d4h0k4sa1t6k5" path="res://assets/charaters/GirlSideR_walkSprite/tile003.png" id="4_nvl01"]
+[ext_resource type="Texture2D" uid="uid://uvwgu7e30fbw" path="res://assets/charaters/GirlSideR_walkSprite/tile004.png" id="5_ivps1"]
+[ext_resource type="Texture2D" uid="uid://dosuuw3xs5qr2" path="res://assets/charaters/GirlSideR_walkSprite/tile005.png" id="6_urp6f"]
+[ext_resource type="Texture2D" uid="uid://dhu4r1hgi05fa" path="res://assets/charaters/GirlSideR_walkSprite/tile006.png" id="7_bwjto"]
+[ext_resource type="Texture2D" uid="uid://dx0vhn11y8pim" path="res://assets/charaters/GirlSideR_walkSprite/tile007.png" id="8_606se"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u1c27"]
+radius = 41.0
+height = 360.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_op7ga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dw050")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_b26j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n7ghd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nvl01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_606se")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 7.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_b26j0")
+inv = ExtResource("2_ml7e8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(25, -172)
+shape = SubResource("CapsuleShape2D_u1c27")
+
+[node name="Player_Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(25, -172)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_op7ga")
+animation = &"idle"
+frame_progress = 0.269538
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true

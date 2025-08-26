@@ -1,0 +1,139 @@
+[gd_scene load_steps=10 format=3 uid="uid://coojlebwp3fck"]
+
+[ext_resource type="Script" uid="uid://b157mdhchkmp2" path="res://inventory/inventory_ui.gd" id="1_f2511"]
+[ext_resource type="Texture2D" uid="uid://deyk0fgkuvmg8" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/Inventory_frame.png" id="2_0dv6l"]
+[ext_resource type="PackedScene" uid="uid://3k48w2547bs2" path="res://inventory/Inv_UI_Slot.tscn" id="3_022t5"]
+[ext_resource type="Texture2D" uid="uid://b0x63uf01w304" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/List_Item.png" id="4_locsq"]
+[ext_resource type="Texture2D" uid="uid://d0s7do5blhmm7" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/Item_frame.png" id="5_uyjf6"]
+[ext_resource type="Texture2D" uid="uid://bohdovdny31h6" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/ItemDetail.png" id="6_inc80"]
+[ext_resource type="Texture2D" uid="uid://c7eg4g0rmvbod" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/back_point.png" id="7_ajlgj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjyhv"]
+size = Vector2(55, 68)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ho8i8"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -22.0
+offset_top = -11.0
+offset_right = -22.0
+offset_bottom = -11.0
+scale = Vector2(1.04, 1.04)
+script = ExtResource("1_f2511")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 9.0
+offset_right = 1252.0
+offset_bottom = 711.0
+texture = ExtResource("2_0dv6l")
+region_rect = Rect2(0, 0, 1920, 1080)
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.615
+offset_top = 20.7693
+offset_right = -339.615
+offset_bottom = 160.769
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.5, 2.5)
+theme_override_constants/h_separation = 22
+theme_override_constants/v_separation = 24
+columns = 4
+
+[node name="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Panel2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Panel3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Panel4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Panel5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Panel6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Panel7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Panel8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_022t5")]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(639, 358)
+scale = Vector2(0.662037, 0.662037)
+texture = ExtResource("2_0dv6l")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(330, 509)
+scale = Vector2(0.662, 0.662)
+texture = ExtResource("4_locsq")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(957, 245)
+scale = Vector2(1.542, 1.542)
+texture = ExtResource("5_uyjf6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(960, 376)
+scale = Vector2(0.662, 0.662)
+texture = ExtResource("6_inc80")
+
+[node name="back" type="Area2D" parent="."]
+position = Vector2(66, 123)
+
+[node name="Sprite2D" type="Sprite2D" parent="back"]
+texture = ExtResource("7_ajlgj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="back"]
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_qjyhv")
+
+[node name="display_item" type="Node2D" parent="."]
+position = Vector2(851.923, 133.654)
+
+[node name="display_texture" type="Sprite2D" parent="display_item"]
+position = Vector2(109.615, 99.0385)
+
+[node name="display_dis" type="Label" parent="display_item"]
+offset_left = -58.6537
+offset_top = 329.808
+offset_right = 276.346
+offset_bottom = 509.808
+theme_override_font_sizes/font_size = 22
+label_settings = SubResource("LabelSettings_ho8i8")
+autowrap_mode = 3
+
+[node name="Item_name" type="Label" parent="display_item"]
+offset_left = 45.1924
+offset_top = 273.077
+offset_right = 85.1924
+offset_bottom = 296.077
+theme_override_font_sizes/font_size = 20
+
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel2" to="." method="_on_panel_2_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel3" to="." method="_on_panel_3_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel4" to="." method="_on_panel_4_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel5" to="." method="_on_panel_5_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel6" to="." method="_on_panel_6_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel7" to="." method="_on_panel_7_mouse_entered"]
+[connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel8" to="." method="_on_panel_8_mouse_entered"]
+[connection signal="input_event" from="back" to="." method="_on_back_input_event"]

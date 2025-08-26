@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://74fsupj15o8r"]
+
+[ext_resource type="Texture2D" uid="uid://bb7u1xlgirp6d" path="res://assets/Scene/Corridor/Corridor.png" id="1_78smd"]
+[ext_resource type="Script" uid="uid://cbqq4r2a4shkr" path="res://scripts/scene_02.gd" id="1_ygre3"]
+[ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="2_5lygx"]
+[ext_resource type="Script" uid="uid://ude1vpw3jopb" path="res://scripts/door_2.gd" id="4_ygre3"]
+[ext_resource type="PackedScene" uid="uid://51m1mtvk702m" path="res://scene/scene_01.tscn" id="5_n5yns"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_5lygx"]
+vertices = PackedVector2Array(1266, 710.992, 7, 710, 7, 685.961, 1266, 682.031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-3, 676, 1276, 672, 1276, 721, -3, 720)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6mjj"]
+size = Vector2(14.9086, 16.7169)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ygre3")
+
+[node name="background" type="Node2D" parent="."]
+position = Vector2(638, 361)
+
+[node name="Corridor" type="Sprite2D" parent="background"]
+texture = ExtResource("1_78smd")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_5lygx")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_5lygx")]
+position = Vector2(67, 710)
+scale = Vector2(1.36, 1.36)
+
+[node name="Door_2" type="Area2D" parent="."]
+position = Vector2(25, 201)
+script = ExtResource("4_ygre3")
+next_scene = ExtResource("5_n5yns")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_2"]
+position = Vector2(175.396, 230.567)
+scale = Vector2(23.0207, 28.2867)
+shape = SubResource("RectangleShape2D_m6mjj")
+
+[connection signal="body_entered" from="Door_2" to="Door_2" method="_on_body_entered"]
+[connection signal="body_exited" from="Door_2" to="Door_2" method="_on_body_exited"]
+[connection signal="input_event" from="Door_2" to="Door_2" method="_on_input_event"]

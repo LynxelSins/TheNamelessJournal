@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://cn1tx4oepy471"]
+
+[ext_resource type="Script" uid="uid://715r5ve23vjf" path="res://inventory/inventory_item.gd" id="1_60aj4"]
+[ext_resource type="Texture2D" uid="uid://b5yshhygpvkad" path="res://assets/Item/Note.png" id="2_n5qwb"]
+
+[resource]
+script = ExtResource("1_60aj4")
+name = "บันทึกที่ 4 “ชื่อที่ไม่มีในรายงาน\""
+texture = ExtResource("2_n5qwb")
+description = "ข้อความในบันทึก : ในรายชื่อผู้เสียชีวิต ไม่มีชื่อของเขา... ทั้งที่เรา เห็นกับตา เขาถูกลากจากห้องเรียนมาที่ตรงกลางลาน เขาชื่อว่า “ปกรณ์”พวกเราทําอะไรไม่ได้เลย ยกเว้นบันทึกชื่อของเขาไว้ ถ้าใคร ได้อ่านข้อความนี้...ช่วยพูดชื่อเขาออกมาดัง ๆ ครั้งหนึ่ง แค่ให้เขารู ว่ายังมีใครจำได้ๆ"
+metadata/_custom_type_script = "uid://715r5ve23vjf"

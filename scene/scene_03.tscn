@@ -1,0 +1,151 @@
+[gd_scene load_steps=19 format=3 uid="uid://c06g7vd8ewvtt"]
+
+[ext_resource type="Texture2D" uid="uid://dx2stbf7286w1" path="res://assets/Scene/stair/Background.png" id="1_l866t"]
+[ext_resource type="Script" uid="uid://1wbfq7fxl76t" path="res://scene/scene_03.gd" id="1_us35b"]
+[ext_resource type="Texture2D" uid="uid://ch3k6tly1cdb1" path="res://assets/Scene/stair/Preveiw.png" id="2_pdc08"]
+[ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="3_qlcl7"]
+[ext_resource type="Texture2D" uid="uid://0yr4bhh7k6vr" path="res://assets/circle_05.png" id="3_qp83f"]
+[ext_resource type="PackedScene" uid="uid://11rgeutrxc2h" path="res://scene/player_ui.tscn" id="4_us35b"]
+[ext_resource type="Texture2D" uid="uid://dxf3gl86brbcf" path="res://assets/Scene/stair/OpenGateCurcuit.png" id="5_qlcl7"]
+[ext_resource type="Texture2D" uid="uid://dgefwkcje3pc4" path="res://assets/Scene/stair/UpStair.png" id="6_ilcnp"]
+[ext_resource type="Texture2D" uid="uid://dox373c2b3c2o" path="res://assets/Scene/stair/Lever.png" id="6_us35b"]
+[ext_resource type="Script" uid="uid://clcnrlwpkyxgv" path="res://scene/light_mouse.gd" id="9_nhi2m"]
+[ext_resource type="Texture2D" uid="uid://cn2f583lxj8rd" path="res://assets/Scene/stair/Gate.png" id="11_tkgci"]
+[ext_resource type="Script" uid="uid://brueffhq2ctfh" path="res://scene/monster.gd" id="12_mc8tj"]
+[ext_resource type="Texture2D" uid="uid://m3yl5shrc7rm" path="res://icon.svg" id="13_reokw"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_o8ty7"]
+vertices = PackedVector2Array(1487.03, 518, 1788.05, 519.992, 1851.94, 531.883, 1059.64, 526.992, 1026.84, 522.773, 640.422, 905.977, -9.78906, 910.531, 83.5313, 881, 602.656, 881, 633.867, 890.727, 1051.98, 529.156, 1026.87, 522.797, 1118.5, 1281.04, 1119.45, 1239.45, 1122.87, 1277, 1867.72, 1289.92, 1793.36, 1277, 1869.06, 1287.09)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 8, 9), PackedInt32Array(4, 3, 10, 11), PackedInt32Array(11, 10, 9, 8), PackedInt32Array(12, 5, 9, 13, 14), PackedInt32Array(15, 12, 14, 16, 17)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1064, 532, 650, 890, 1129, 1234, 1132, 1267, 1794, 1267, 1884, 1279, 1874, 1300, 1115, 1291, 637, 916, -76, 921, 82, 871, 599, 871, 1023, 513), PackedVector2Array(1789, 510, 1875, 526, 1871, 542, 1061, 537, 1033, 545, 1005, 513, 1487, 508)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q8erj"]
+size = Vector2(67, 66)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ilcnp"]
+radius = 110.47
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mc8tj"]
+radius = 48.0
+height = 298.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7s0nn"]
+radius = 61.0
+height = 234.0
+
+[node name="scene_03" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_us35b")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(1228, 763)
+scale = Vector2(0.556311, 4.66823)
+energy = 0.1
+texture = ExtResource("3_qp83f")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_qlcl7")]
+z_index = 1
+position = Vector2(1140, 274)
+scale = Vector2(0.7, 0.7)
+
+[node name="PointLight2D2" type="PointLight2D" parent="CharacterBody2D"]
+position = Vector2(18.5714, -242.857)
+rotation = 3.14159
+scale = Vector2(0.891476, -2.58242)
+energy = 0.25
+texture = ExtResource("3_qp83f")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(652, 361)
+scale = Vector2(0.7, 0.7)
+
+[node name="background" type="Node2D" parent="."]
+scale = Vector2(0.675701, 0.516666)
+
+[node name="background" type="Sprite2D" parent="background"]
+position = Vector2(945.685, 687.098)
+texture = ExtResource("1_l866t")
+
+[node name="preview" type="Sprite2D" parent="background"]
+position = Vector2(953, 697)
+texture = ExtResource("2_pdc08")
+
+[node name="Sprite2D" type="Sprite2D" parent="background"]
+visible = false
+z_index = 1
+position = Vector2(1260.91, 772.259)
+texture = ExtResource("6_ilcnp")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+scale = Vector2(0.675701, 0.516666)
+navigation_polygon = SubResource("NavigationPolygon_o8ty7")
+
+[node name="player UI" parent="." instance=ExtResource("4_us35b")]
+
+[node name="switch" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="switch"]
+position = Vector2(940, 135)
+scale = Vector2(0.676, 0.517)
+texture = ExtResource("5_qlcl7")
+
+[node name="lever" type="Sprite2D" parent="switch"]
+position = Vector2(962, 127)
+rotation = 3.14159
+scale = Vector2(0.676, 0.517)
+texture = ExtResource("6_us35b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="switch"]
+position = Vector2(962.5, 136)
+shape = SubResource("RectangleShape2D_q8erj")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.00451714, 0.00904128, 0.0124639, 1)
+
+[node name="light_mouse" type="Area2D" parent="." groups=["Light"]]
+position = Vector2(348, 221)
+script = ExtResource("9_nhi2m")
+
+[node name="PointLight2D" type="PointLight2D" parent="light_mouse"]
+energy = 0.85
+texture = ExtResource("3_qp83f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="light_mouse"]
+shape = SubResource("CircleShape2D_ilcnp")
+
+[node name="door" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="door"]
+position = Vector2(1226, 400)
+texture = ExtResource("11_tkgci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(1222, 522)
+shape = SubResource("CapsuleShape2D_mc8tj")
+
+[node name="monster" type="Area2D" parent="."]
+position = Vector2(759, 214)
+script = ExtResource("12_mc8tj")
+
+[node name="Sprite2D" type="Sprite2D" parent="monster"]
+texture = ExtResource("13_reokw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="monster"]
+position = Vector2(0, -30)
+shape = SubResource("CapsuleShape2D_7s0nn")
+
+[node name="Timer" type="Timer" parent="monster"]
+autostart = true
+
+[connection signal="input_event" from="switch" to="." method="_on_switch_input_event"]
+[connection signal="mouse_exited" from="switch" to="." method="_on_switch_mouse_exited"]
+[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
+[connection signal="area_entered" from="monster" to="." method="_on_monster_area_entered"]
+[connection signal="area_exited" from="monster" to="." method="_on_monster_area_exited"]
+[connection signal="timeout" from="monster/Timer" to="monster" method="_on_timer_timeout"]

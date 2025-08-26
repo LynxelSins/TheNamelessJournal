@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://51m1mtvk702m"]
+
+[ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://player.tscn" id="1_fa0a0"]
+[ext_resource type="Texture2D" uid="uid://b7qll5k26ae5v" path="res://assets/Scene/Office/แบบแยกโต๊ะทำงานเผื่อว่าจะอยากวางโต๊ะหน้าตัวละคร/CL.png" id="2_8oqnh"]
+[ext_resource type="Texture2D" uid="uid://0qgxorkyj0yb" path="res://assets/Scene/Office/แบบแยกโต๊ะทำงานเผื่อว่าจะอยากวางโต๊ะหน้าตัวละคร/CL_table.png" id="3_rne47"]
+[ext_resource type="Script" uid="uid://bo6absctonixn" path="res://door.gd" id="4_8oqnh"]
+[ext_resource type="PackedScene" uid="uid://74fsupj15o8r" path="res://scene_02.tscn" id="5_rne47"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ak66w"]
+vertices = PackedVector2Array(2189.55, 664.992, 2302.44, 723.656, 116.141, 706.172, 155.477, 662)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(94, 716, 151, 652, 2192, 655, 2344, 734)])
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rne47"]
+radius = 24.0
+height = 368.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_fa0a0")]
+modulate = Color(0.4624, 0.520427, 0.68, 1)
+z_index = 1
+position = Vector2(549, 732)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(93, -370)
+drag_horizontal_enabled = true
+
+[node name="Scene" type="Node2D" parent="."]
+position = Vector2(1200, 361)
+scale = Vector2(0.24, 0.24)
+
+[node name="Background" type="Sprite2D" parent="Scene"]
+texture = ExtResource("2_8oqnh")
+
+[node name="Table" type="Sprite2D" parent="Scene"]
+z_index = 2
+position = Vector2(-3833.33, 812.5)
+texture = ExtResource("3_rne47")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_ak66w")
+
+[node name="Door" type="Area2D" parent="."]
+script = ExtResource("4_8oqnh")
+next_scene = ExtResource("5_rne47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(2233, 519)
+shape = SubResource("CapsuleShape2D_rne47")
+
+[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]

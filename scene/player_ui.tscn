@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://11rgeutrxc2h"]
+
+[ext_resource type="Script" uid="uid://cvr4tqmt5748h" path="res://inventory/player_ui.gd" id="1_6n5fa"]
+[ext_resource type="PackedScene" uid="uid://coojlebwp3fck" path="res://inventory/inventory.tscn" id="2_u2m4h"]
+[ext_resource type="Texture2D" uid="uid://m3yl5shrc7rm" path="res://icon.svg" id="3_yoqii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8a8i"]
+size = Vector2(128, 130)
+
+[node name="player UI" type="CanvasLayer"]
+script = ExtResource("1_6n5fa")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(77, 71)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("3_yoqii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_p8a8i")
+
+[node name="Inventory" parent="." instance=ExtResource("2_u2m4h")]
+visible = false
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

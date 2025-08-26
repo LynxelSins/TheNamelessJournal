@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://c8hn8hspii7up"]
+
+[ext_resource type="Script" uid="uid://715r5ve23vjf" path="res://inventory/inventory_item.gd" id="1_qtffo"]
+[ext_resource type="Texture2D" uid="uid://b5yshhygpvkad" path="res://assets/Item/Note.png" id="2_2o7d0"]
+
+[resource]
+script = ExtResource("1_qtffo")
+name = "บันทึกที่ 1 “กระดาษสีขาว”"
+texture = ExtResource("2_2o7d0")
+description = "ข้อความในบันทึก : คืนวันที่ 5 ตุลา พวกเรานัดรวมตัวกันที่ตึกนี้แล้ว ไฟในหอพักก็ดับ แต่เสียงจากโทรโข่งยังดังไม่หยุดมีคนเอากระดาษ สีขาวมาติดเต็มกําแพง เขียนแค่ตัวเลขเดียวว่า “61” พวกเราไม่ เข้าใจว่าคืออะไร แต่คืนนี้เราก็ยังคงตัดสินใจอยู่ต่อ “ขอแค่เขา เห็นพวกเรา ยังยืนอยู่ก็พอ”"
+metadata/_custom_type_script = "uid://715r5ve23vjf"

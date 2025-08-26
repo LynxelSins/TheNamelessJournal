@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://dfs170n78x30y"]
+
+[ext_resource type="Script" uid="uid://715r5ve23vjf" path="res://inventory/inventory_item.gd" id="1_r7nru"]
+[ext_resource type="Texture2D" uid="uid://b5yshhygpvkad" path="res://assets/Item/Note.png" id="2_mmv4m"]
+
+[resource]
+script = ExtResource("1_r7nru")
+name = "บันทึกที่ 2 “ช่วยด้วย\""
+texture = ExtResource("2_mmv4m")
+description = "ข้อความในบันทิก : ช่วยพวกเราที 22:17 แล้วเรายังออกไปจากที่นี่ ไม่ได้เลย"
+metadata/_custom_type_script = "uid://715r5ve23vjf"

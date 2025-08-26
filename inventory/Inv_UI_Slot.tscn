@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://3k48w2547bs2"]
+
+[ext_resource type="Texture2D" uid="uid://ctouvcjb6e1np" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/GameUI/inv_slot.png" id="1_5nx3r"]
+[ext_resource type="Script" uid="uid://dw23iuejaso0g" path="res://inventory/inv_ui_slot.gd" id="1_rkbpk"]
+
+[node name="inv_UI_slot" type="Panel"]
+custom_minimum_size = Vector2(40, 40)
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+script = ExtResource("1_rkbpk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20.25, 20.285)
+scale = Vector2(0.212366, 0.212366)
+texture = ExtResource("1_5nx3r")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="item_display" type="Sprite2D" parent="CenterContainer/Panel"]
+position = Vector2(5.96046e-07, 1.66667)
+scale = Vector2(0.15, 0.15)

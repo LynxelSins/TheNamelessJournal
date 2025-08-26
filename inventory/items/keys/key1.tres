@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://414fwbaxokit"]
+
+[ext_resource type="Script" uid="uid://715r5ve23vjf" path="res://inventory/inventory_item.gd" id="1_kaqi3"]
+[ext_resource type="Texture2D" uid="uid://cca450k2nwl61" path="res://assets/Item/Key1.png" id="2_1rel6"]
+
+[resource]
+script = ExtResource("1_kaqi3")
+name = "storageRoom key"
+texture = ExtResource("2_1rel6")
+description = "key1"
+metadata/_custom_type_script = "uid://715r5ve23vjf"

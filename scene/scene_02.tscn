@@ -1,0 +1,97 @@
+[gd_scene load_steps=16 format=3 uid="uid://74fsupj15o8r"]
+
+[ext_resource type="Texture2D" uid="uid://bb7u1xlgirp6d" path="res://assets/Scene/Corridor/Corridor.png" id="1_78smd"]
+[ext_resource type="Script" uid="uid://cbqq4r2a4shkr" path="res://scripts/scene_02.gd" id="1_ygre3"]
+[ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_jemyb"]
+[ext_resource type="Resource" uid="uid://c8hn8hspii7up" path="res://inventory/items/keys/note_1.tres" id="3_2mw3l"]
+[ext_resource type="Texture2D" uid="uid://cbqmbf7g3glhc" path="res://assets/Scene/Corridor/DBird.png" id="4_04lvu"]
+[ext_resource type="Script" uid="uid://bajfcw7a8cn5h" path="res://scripts/scene_2_door_1.gd" id="4_oemjh"]
+[ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="5_46re4"]
+[ext_resource type="Texture2D" uid="uid://m3yl5shrc7rm" path="res://icon.svg" id="5_n5yns"]
+[ext_resource type="PackedScene" uid="uid://11rgeutrxc2h" path="res://scene/player_ui.tscn" id="6_46re4"]
+[ext_resource type="Texture2D" uid="uid://ccj6wbwul5n61" path="res://assets/Scene/Corridor/Note1.png" id="8_jemyb"]
+[ext_resource type="Script" uid="uid://uh0evtqdc60d" path="res://scene/stair.gd" id="11_6ykvm"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_5lygx"]
+vertices = PackedVector2Array(1266, 710.992, 7, 710, 7, 685.961, 1266, 682.031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-3, 676, 1276, 672, 1276, 721, -3, 720)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5yns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mw3l"]
+size = Vector2(98, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edmqn"]
+size = Vector2(146, 721)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ygre3")
+inv = ExtResource("2_jemyb")
+note_1 = ExtResource("3_2mw3l")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("5_46re4")]
+z_index = 1
+position = Vector2(67, 710)
+scale = Vector2(1.36, 1.36)
+
+[node name="background" type="Node2D" parent="."]
+position = Vector2(638, 361)
+
+[node name="Corridor" type="Sprite2D" parent="background"]
+texture = ExtResource("1_78smd")
+
+[node name="Sprite2D" type="Sprite2D" parent="background"]
+position = Vector2(-161, 323)
+texture = ExtResource("4_04lvu")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_5lygx")
+
+[node name="scene_2_door_1" type="Area2D" parent="."]
+position = Vector2(28, 207)
+script = ExtResource("4_oemjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="scene_2_door_1"]
+position = Vector2(174, 225)
+scale = Vector2(17.9379, 23.7848)
+shape = SubResource("RectangleShape2D_n5yns")
+
+[node name="Sprite2D" type="Sprite2D" parent="scene_2_door_1"]
+visible = false
+texture = ExtResource("5_n5yns")
+
+[node name="player UI" parent="." instance=ExtResource("6_46re4")]
+
+[node name="note_1" type="Area2D" parent="."]
+position = Vector2(680, 233)
+
+[node name="Sprite2D" type="Sprite2D" parent="note_1"]
+position = Vector2(43, 45)
+texture = ExtResource("8_jemyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="note_1"]
+position = Vector2(39, 41.5)
+shape = SubResource("RectangleShape2D_2mw3l")
+
+[node name="stair" type="Area2D" parent="."]
+script = ExtResource("11_6ykvm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="stair"]
+position = Vector2(1201, 358.5)
+shape = SubResource("RectangleShape2D_edmqn")
+
+[connection signal="body_entered" from="scene_2_door_1" to="scene_2_door_1" method="_on_body_entered"]
+[connection signal="body_exited" from="scene_2_door_1" to="scene_2_door_1" method="_on_body_exited"]
+[connection signal="input_event" from="scene_2_door_1" to="scene_2_door_1" method="_on_input_event"]
+[connection signal="input_event" from="note_1" to="." method="_on_note_1_input_event"]
+[connection signal="body_entered" from="stair" to="stair" method="_on_body_entered"]
+[connection signal="body_exited" from="stair" to="stair" method="_on_body_exited"]
+[connection signal="input_event" from="stair" to="stair" method="_on_input_event"]
