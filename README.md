@@ -129,8 +129,6 @@ Enemy : วิญญาณนักศึกษา
 ### **หน้าเล่นเกม**
 
 แสดงหน้าตัวอย่างการเล่น และ คำอธิบาย อย่างน้อย 3 หน้า
-
-		คำอธิบาย 
 		
 **Win**
 
@@ -139,9 +137,7 @@ Enemy : วิญญาณนักศึกษา
 **VDO**
 
 ### **อ้างอิง**
-ระบุแหล่งที่มาของ Source Code และ Asset ต่าง ๆ ที่ใช้
-Game Template มาจาก 2D Platformer Demo - Godot Asset Library 
-Sprite ก้อนอิฐ   มาจาก Brick Pack · Kenney 
+**Sound and Music**
 
 
 
