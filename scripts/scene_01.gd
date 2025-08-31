@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	if !LinChuck.visible:
 		player.setMoveable(true)
 	else:
-		if LinChuck.get_current_code() == "1234":
+		if LinChuck.get_current_code() == "6210":
 			LinChuck.code_correct()
 			GameStateManager.Office_Linchuck_open = true
 	
@@ -46,4 +46,5 @@ func _on_light_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 			await  get_tree().process_frame
 		$Scene/Background.texture = lighttexture
 		$CharacterBody2D.modulate = Color("#ffffff")
+		$CanvasModulate.visible = false
 		GameStateManager.Office_Light = true

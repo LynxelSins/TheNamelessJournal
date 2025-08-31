@@ -1,0 +1,153 @@
+[gd_scene load_steps=21 format=3 uid="uid://c5hmjmobolpmv"]
+
+[ext_resource type="Script" uid="uid://d4crid1rwenft" path="res://scene/scene_05.gd" id="1_lm8e4"]
+[ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="2_4db15"]
+[ext_resource type="Texture2D" uid="uid://dmjhlu4lgcb7u" path="res://assets/Scene/StorageRoom/EmptyStorageRoom.png" id="3_muqpa"]
+[ext_resource type="Texture2D" uid="uid://drf11mq66hpta" path="res://assets/Scene/StorageRoom/StorageRoom.jpg" id="4_ys4i8"]
+[ext_resource type="Texture2D" uid="uid://biplpnr0x1628" path="res://assets/Scene/StorageRoom/light.png" id="5_4v6tl"]
+[ext_resource type="Texture2D" uid="uid://b2slpimfbmb4o" path="res://assets/Scene/StorageRoom/shelf.png" id="6_hxgdo"]
+[ext_resource type="Texture2D" uid="uid://mum6cbeqsyrt" path="res://assets/Scene/StorageRoom/bookshelf.png" id="7_5l77d"]
+[ext_resource type="Texture2D" uid="uid://ut3fyxunsh80" path="res://assets/Scene/StorageRoom/box1.png" id="8_c0el3"]
+[ext_resource type="Texture2D" uid="uid://cc1qfg6iqk7mh" path="res://assets/Scene/StorageRoom/box2.png" id="9_yyr4s"]
+[ext_resource type="Texture2D" uid="uid://bm3xteldu517x" path="res://assets/Scene/StorageRoom/prop.png" id="10_2o1n3"]
+[ext_resource type="Texture2D" uid="uid://omn2kjarxjs4" path="res://assets/Scene/StorageRoom/light_switch.png" id="11_4db15"]
+[ext_resource type="Texture2D" uid="uid://h4f8y0fwrjyt" path="res://assets/Scene/StorageRoom/KeyBox.png" id="11_6cpup"]
+[ext_resource type="PackedScene" uid="uid://11rgeutrxc2h" path="res://scene/player_ui.tscn" id="12_1rsms"]
+[ext_resource type="PackedScene" uid="uid://deiyjxc7bkwx7" path="res://scene/flashlight.tscn" id="14_muqpa"]
+[ext_resource type="Texture2D" uid="uid://brgkk81of7cko" path="res://assets/Scene/StorageRoom/turnOnLightFilter.png" id="15_ys4i8"]
+[ext_resource type="PackedScene" uid="uid://b4p57l1owed2v" path="res://scene/locker_puzzle.tscn" id="16_4v6tl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muqpa"]
+size = Vector2(20, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46x77"]
+size = Vector2(65, 90)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_o1ry1"]
+vertices = PackedVector2Array(1193.99, 625.977, 1285.93, 713.031, -8.60156, 714.961, 91.9297, 621.008)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(88, 611, 1198, 616, 1311, 723, -34, 725)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4v6tl"]
+size = Vector2(104, 483)
+
+[node name="Scene_05" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_lm8e4")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_4db15")]
+z_index = 2
+position = Vector2(83, 660)
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="EmptyBackground" type="Sprite2D" parent="Background"]
+position = Vector2(645, 361)
+scale = Vector2(0.613182, 0.655909)
+texture = ExtResource("3_muqpa")
+metadata/_edit_lock_ = true
+
+[node name="FullBG" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(645, 360)
+scale = Vector2(0.613, 0.656)
+texture = ExtResource("4_ys4i8")
+metadata/_edit_lock_ = true
+
+[node name="Light_Celling" type="Sprite2D" parent="Background"]
+position = Vector2(650, 52)
+scale = Vector2(0.613, 0.656)
+texture = ExtResource("5_4v6tl")
+metadata/_edit_lock_ = true
+
+[node name="shelf" type="Sprite2D" parent="Background"]
+position = Vector2(655, 373)
+scale = Vector2(0.613, 0.656)
+texture = ExtResource("6_hxgdo")
+metadata/_edit_lock_ = true
+
+[node name="bookshelf" type="Sprite2D" parent="Background"]
+position = Vector2(1046, 486)
+scale = Vector2(0.613, 0.656)
+texture = ExtResource("7_5l77d")
+metadata/_edit_lock_ = true
+
+[node name="box1" type="Sprite2D" parent="Background"]
+position = Vector2(381, 528)
+scale = Vector2(0.613, 0.656)
+texture = ExtResource("8_c0el3")
+metadata/_edit_lock_ = true
+
+[node name="box2" type="Sprite2D" parent="Background"]
+position = Vector2(941, 504)
+scale = Vector2(0.613, 0.656)
+texture = ExtResource("9_yyr4s")
+metadata/_edit_lock_ = true
+
+[node name="prop" type="Sprite2D" parent="Background"]
+visible = false
+z_index = 3
+scale = Vector2(0.613, 1)
+texture = ExtResource("10_2o1n3")
+
+[node name="light_switch" type="Area2D" parent="."]
+
+[node name="light_switch_sprite" type="Sprite2D" parent="light_switch"]
+position = Vector2(285.25, 236.253)
+scale = Vector2(1.24118, 1.24118)
+texture = ExtResource("11_4db15")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="light_switch"]
+position = Vector2(287, 354.5)
+shape = SubResource("RectangleShape2D_muqpa")
+
+[node name="keyBox" type="Area2D" parent="."]
+position = Vector2(1243, 383)
+
+[node name="Sprite2D" type="Sprite2D" parent="keyBox"]
+scale = Vector2(0.613, 0.656)
+texture = ExtResource("11_6cpup")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="keyBox"]
+position = Vector2(2.5, -1)
+shape = SubResource("RectangleShape2D_46x77")
+
+[node name="player UI" parent="." instance=ExtResource("12_1rsms")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_o1ry1")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.0117647, 0.0235294, 0.0352941, 1)
+
+[node name="flashlight" parent="." instance=ExtResource("14_muqpa")]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(638, 358)
+scale = Vector2(0.613, 0.656)
+color = Color(1, 1, 0.92549, 1)
+energy = 4.13
+texture = ExtResource("15_ys4i8")
+
+[node name="Locker_puzzle" parent="." instance=ExtResource("16_4v6tl")]
+visible = false
+
+[node name="door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="door"]
+position = Vector2(49, 464.5)
+shape = SubResource("RectangleShape2D_4v6tl")
+
+[connection signal="input_event" from="light_switch" to="." method="_on_light_switch_input_event"]
+[connection signal="input_event" from="keyBox" to="." method="_on_key_box_input_event"]
+[connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
+[connection signal="body_exited" from="door" to="." method="_on_door_body_exited"]
+[connection signal="input_event" from="door" to="." method="_on_door_input_event"]

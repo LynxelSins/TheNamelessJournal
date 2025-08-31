@@ -10,8 +10,8 @@ func _ready() -> void:
 		$note_1.visible = false
 	if GameStateManager.Corridor_FromScene_3:
 		GameStateManager.Corridor_FromScene_3 = false
-		player.position.x = 975.0
-		player.destination.x = 975.0
+		player.position.x = 997.0
+		player.destination.x = 997.0
 
 
 ##collect note 1 into inv

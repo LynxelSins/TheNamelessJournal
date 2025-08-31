@@ -1,0 +1,166 @@
+[gd_scene load_steps=24 format=3 uid="uid://cdcjhd4vo61j"]
+
+[ext_resource type="Script" uid="uid://d3phkbf7uotl0" path="res://scene/scene_04.gd" id="1_ajxqv"]
+[ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="1_pifa7"]
+[ext_resource type="Texture2D" uid="uid://c8lbfjv7er24f" path="res://assets/Scene/hall/Hall.png" id="2_ajxqv"]
+[ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_fa555"]
+[ext_resource type="Resource" uid="uid://dfs170n78x30y" path="res://inventory/items/keys/note_2.tres" id="3_bxo2k"]
+[ext_resource type="Texture2D" uid="uid://cfx1fgmpgqhcj" path="res://assets/Scene/hall/Board.png" id="3_wcocp"]
+[ext_resource type="Texture2D" uid="uid://b2hu5smjudyuv" path="res://assets/Scene/hall/Hall_withFilter.png" id="4_hlayl"]
+[ext_resource type="Texture2D" uid="uid://duo2byhk27pc0" path="res://assets/Scene/hall/Office_table.png" id="5_s207s"]
+[ext_resource type="Texture2D" uid="uid://bg6w3gef1mx1r" path="res://assets/Scene/hall/Chair.png" id="6_5ucdb"]
+[ext_resource type="Texture2D" uid="uid://dv8lkd004awu1" path="res://assets/Scene/hall/Safe.png" id="7_kk3c3"]
+[ext_resource type="Texture2D" uid="uid://f6vtin8bmvt1" path="res://assets/Scene/hall/Safe_Open.png" id="8_fa555"]
+[ext_resource type="Texture2D" uid="uid://r5jq8ykhetqq" path="res://assets/Scene/hall/Shelf_and_BlackBoard.png" id="9_bxo2k"]
+[ext_resource type="Texture2D" uid="uid://cwxqd8mpt3dj5" path="res://assets/Scene/hall/Storageroom_opened.png" id="10_mw1ru"]
+[ext_resource type="PackedScene" uid="uid://11rgeutrxc2h" path="res://scene/player_ui.tscn" id="12_wcocp"]
+[ext_resource type="PackedScene" uid="uid://deiyjxc7bkwx7" path="res://scene/flashlight.tscn" id="13_s207s"]
+[ext_resource type="Texture2D" uid="uid://okt0u321ow68" path="res://assets/Scene/hall/Just_a_paper.png" id="14_5ucdb"]
+[ext_resource type="PackedScene" uid="uid://btxnyev0m22jt" path="res://scene/safe_puzzle.tscn" id="15_5ucdb"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ajxqv"]
+vertices = PackedVector2Array(1269.13, 626.133, 1271.71, 718.961, 6.60938, 715.023, 3.1875, 627.883, 217.32, 468.977, 1053.69, 466.008)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(214, 459, 1057, 456, 1279, 621, 1282, 729, -3, 725, -7, 623)])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlayl"]
+size = Vector2(76, 297)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s207s"]
+size = Vector2(174, 463)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ucdb"]
+size = Vector2(173, 180)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kk3c3"]
+size = Vector2(69, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fa555"]
+size = Vector2(69, 36)
+
+[node name="scene_04" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_ajxqv")
+inv = ExtResource("2_fa555")
+note2 = ExtResource("3_bxo2k")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_pifa7")]
+z_index = 1
+position = Vector2(112, 591)
+scale = Vector2(0.7, 0.7)
+
+[node name="background" type="Node2D" parent="."]
+position = Vector2(639, 366)
+scale = Vector2(0.611638, 0.662549)
+metadata/_edit_lock_ = true
+
+[node name="base" type="Sprite2D" parent="background"]
+texture = ExtResource("2_ajxqv")
+
+[node name="base_light" type="Sprite2D" parent="background"]
+visible = false
+texture = ExtResource("4_hlayl")
+
+[node name="table_sprite" type="Sprite2D" parent="background"]
+z_index = 2
+position = Vector2(3.99988, 308)
+texture = ExtResource("5_s207s")
+
+[node name="board" type="Sprite2D" parent="background"]
+position = Vector2(459, 31)
+texture = ExtResource("3_wcocp")
+
+[node name="filter" type="Sprite2D" parent="background"]
+visible = false
+texture = ExtResource("4_hlayl")
+
+[node name="chair" type="Sprite2D" parent="background"]
+z_index = 2
+position = Vector2(299, 307)
+texture = ExtResource("6_5ucdb")
+
+[node name="safe" type="Sprite2D" parent="background"]
+z_index = 3
+position = Vector2(-214, 308)
+texture = ExtResource("7_kk3c3")
+
+[node name="safe_opened" type="Sprite2D" parent="background"]
+visible = false
+position = Vector2(-192, 309)
+texture = ExtResource("8_fa555")
+
+[node name="shelf_and_blackboard" type="Sprite2D" parent="background"]
+position = Vector2(-401, 13)
+texture = ExtResource("9_bxo2k")
+
+[node name="storage_door_opened" type="Sprite2D" parent="background"]
+visible = false
+position = Vector2(841, 57)
+texture = ExtResource("10_mw1ru")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.0117647, 0.0235294, 0.0352941, 1)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_ajxqv")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+vertices = PackedVector2Array(360, 484, 922, 488, 1009, 584, 1012, 686, 889, 688, 867, 656, 785, 662, 771, 610, 536, 608, 469, 608, 433, 622, 392, 689, 269, 689, 270, 584)
+affect_navigation_mesh = true
+
+[node name="doorRight" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doorRight"]
+position = Vector2(1155, 413.5)
+shape = SubResource("RectangleShape2D_hlayl")
+
+[node name="doorLeft" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doorLeft"]
+position = Vector2(77, 389.5)
+shape = SubResource("RectangleShape2D_s207s")
+
+[node name="doorDoorMiddle" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="doorDoorMiddle"]
+position = Vector2(639.5, 361)
+shape = SubResource("RectangleShape2D_5ucdb")
+
+[node name="player UI" parent="." instance=ExtResource("12_wcocp")]
+
+[node name="flashlight" parent="." instance=ExtResource("13_s207s")]
+
+[node name="safe" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="safe"]
+z_index = 3
+position = Vector2(507.5, 569.5)
+shape = SubResource("RectangleShape2D_kk3c3")
+
+[node name="note" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="note"]
+z_index = 2
+position = Vector2(887, 490)
+texture = ExtResource("14_5ucdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="note"]
+z_index = 2
+position = Vector2(885.5, 490)
+shape = SubResource("RectangleShape2D_fa555")
+
+[node name="safe_puzzle" parent="." instance=ExtResource("15_5ucdb")]
+visible = false
+
+[connection signal="input_event" from="doorRight" to="." method="_on_door_right_input_event"]
+[connection signal="input_event" from="doorLeft" to="." method="_on_door_left_input_event"]
+[connection signal="input_event" from="doorDoorMiddle" to="." method="_on_door_door_middle_input_event"]
+[connection signal="input_event" from="safe" to="." method="_on_safe_input_event"]
+[connection signal="input_event" from="note" to="." method="_on_note_input_event"]

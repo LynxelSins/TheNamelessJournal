@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://xrdwqrd2gf26"]
+
+[ext_resource type="Script" uid="uid://b4qaq06jrhpkv" path="res://main_menu.gd" id="1_3er1b"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3er1b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 397.0
+offset_right = 924.0
+offset_bottom = 497.0
+theme_override_font_sizes/font_size = 30
+text = "Play"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 46.0
+offset_right = 1087.0
+offset_bottom = 306.0
+theme_override_font_sizes/font_size = 110
+text = "Something"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

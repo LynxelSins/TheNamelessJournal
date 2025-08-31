@@ -12,6 +12,13 @@ func _ready():
 	close()
 	
 	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("Inventory"):
+		if !is_open:
+			open()
+		else:
+			close()	
+	
 func update_display_item(item):
 	
 	## cant access item (see. inv_ui_slot , _on_panel_mouse_entered())
@@ -79,3 +86,39 @@ func _on_panel_7_mouse_entered() -> void:
 func _on_panel_8_mouse_entered() -> void:
 	if $NinePatchRect/GridContainer/Panel8.item:
 		update_display_item($NinePatchRect/GridContainer/Panel8.item)
+		
+		
+		
+func find_item_by_name(item_name: String) -> int:
+	for i in range(inv.slots.size()):
+		var slot_data = inv.slots[i]
+		# Check if the slot is valid, has an item, and if the item's name matches.
+		if slot_data and slot_data.item and slot_data.item.name == item_name:
+			print("Found '", item_name, "' at index: ", i)
+			return i # Return the index of the found item
+	
+	print("Item '", item_name, "' not found.")
+	return -1 # Return -1 if the loop finishes without finding the item
+	
+	
+func remove_item_by_name(item_name: String) -> bool:
+	# Use our find function to get the index of the item.
+	var item_index = find_item_by_name(item_name)
+	
+	# If item_index is not -1, it means the item was found in the inventory.
+	if item_index != -1:
+		# To "remove" the item, we replace its slot data with an empty InvSlot object.
+		# Setting it to 'null' caused the error because the UI slot script
+		# doesn't know how to handle a null value.
+		# By creating a new InvSlot, we ensure the slot has a valid object,
+		# even if that object contains no item.
+		inv.slots[item_index] = InvSlot.new()
+
+		# After modifying the inventory data, we must update the UI to show the change.
+		update_slots()
+		print("Removed '", item_name, "' from inventory.")
+		return true # Indicate that the removal was successful.
+		
+	# This code runs if the item was not found.
+	print("Could not remove '", item_name, "' because it was not in the inventory.")
+	return false # Indicate that no item was removed.

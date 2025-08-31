@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://74fsupj15o8r"]
+[gd_scene load_steps=17 format=3 uid="uid://74fsupj15o8r"]
 
 [ext_resource type="Texture2D" uid="uid://bb7u1xlgirp6d" path="res://assets/Scene/Corridor/Corridor.png" id="1_78smd"]
 [ext_resource type="Script" uid="uid://cbqq4r2a4shkr" path="res://scripts/scene_02.gd" id="1_ygre3"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://11rgeutrxc2h" path="res://scene/player_ui.tscn" id="6_46re4"]
 [ext_resource type="Texture2D" uid="uid://ccj6wbwul5n61" path="res://assets/Scene/Corridor/Note1.png" id="8_jemyb"]
 [ext_resource type="Script" uid="uid://uh0evtqdc60d" path="res://scene/stair.gd" id="11_6ykvm"]
+[ext_resource type="PackedScene" uid="uid://deiyjxc7bkwx7" path="res://scene/flashlight.tscn" id="12_edmqn"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_5lygx"]
 vertices = PackedVector2Array(1266, 710.992, 7, 710, 7, 685.961, 1266, 682.031)
@@ -39,7 +40,7 @@ note_1 = ExtResource("3_2mw3l")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("5_46re4")]
 z_index = 1
-position = Vector2(67, 710)
+position = Vector2(164, 696)
 scale = Vector2(1.36, 1.36)
 
 [node name="background" type="Node2D" parent="."]
@@ -87,6 +88,11 @@ script = ExtResource("11_6ykvm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="stair"]
 position = Vector2(1201, 358.5)
 shape = SubResource("RectangleShape2D_edmqn")
+
+[node name="flashlight" parent="." instance=ExtResource("12_edmqn")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.050478, 0.0856643, 0.111487, 1)
 
 [connection signal="body_entered" from="scene_2_door_1" to="scene_2_door_1" method="_on_body_entered"]
 [connection signal="body_exited" from="scene_2_door_1" to="scene_2_door_1" method="_on_body_exited"]
