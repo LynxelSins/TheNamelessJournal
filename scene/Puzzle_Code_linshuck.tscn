@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://gnnr42htktvo"]
+[gd_scene load_steps=13 format=3 uid="uid://gnnr42htktvo"]
 
-[ext_resource type="Script" uid="uid://b4n081v4cxssv" path="res://scripts/puzzle_code_linshuck.gd" id="1_g0jyy"]
+[ext_resource type="Script" uid="uid://dkfrxl7q3sm6x" path="res://scene/puzzle_code_linshuckReal.gd" id="1_vctgn"]
 [ext_resource type="Texture2D" uid="uid://go246v4yx7b6" path="res://will_delete/ed3c8d51-ce2f-4975-9614-7c80a860da47.jpg" id="1_x714f"]
 [ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_r038g"]
 [ext_resource type="Resource" uid="uid://cn1tx4oepy471" path="res://inventory/items/keys/note_4.tres" id="3_mjuem"]
 [ext_resource type="Texture2D" uid="uid://c7eg4g0rmvbod" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/back_point.png" id="3_vg4e8"]
+[ext_resource type="Resource" uid="uid://414fwbaxokit" path="res://inventory/items/keys/key1.tres" id="4_ai4s8"]
 [ext_resource type="Texture2D" uid="uid://cvuejpj46vkqn" path="res://assets/Scene/Office/ลิ้นชัก/Unlock.png" id="4_vctgn"]
 [ext_resource type="Texture2D" uid="uid://8tvw7j37nnm" path="res://assets/Scene/Office/ลิ้นชัก/Note4.png" id="5_r038g"]
 
@@ -21,9 +22,10 @@ size = Vector2(20, 34.589)
 size = Vector2(120, 120)
 
 [node name="LinShuck_Puzzle" type="CanvasLayer"]
-script = ExtResource("1_g0jyy")
+script = ExtResource("1_vctgn")
 inv = ExtResource("2_r038g")
 item = ExtResource("3_mjuem")
+item2 = ExtResource("4_ai4s8")
 
 [node name="Node2D" type="Node2D" parent="."]
 

@@ -1,0 +1,123 @@
+[gd_scene load_steps=12 format=3 uid="uid://btxnyev0m22jt"]
+
+[ext_resource type="Script" uid="uid://b4n081v4cxssv" path="res://scripts/puzzle_code_linshuck.gd" id="1_6fq24"]
+[ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_lr0nq"]
+[ext_resource type="Resource" uid="uid://414fwbaxokit" path="res://inventory/items/keys/key1.tres" id="3_a6441"]
+[ext_resource type="Texture2D" uid="uid://d3x06xpj6wc3l" path="res://assets/Scene/hall/1stHall/ตู้/Lock.png" id="4_lawpr"]
+[ext_resource type="Texture2D" uid="uid://d01wsikt82csp" path="res://assets/Scene/hall/1stHall/ตู้/Unlock .png" id="5_6fq24"]
+[ext_resource type="Texture2D" uid="uid://b5lfnssefac3h" path="res://assets/Scene/hall/1stHall/ตู้/Key1.png" id="6_udns1"]
+[ext_resource type="Texture2D" uid="uid://c7eg4g0rmvbod" path="res://assets/InventoryElement-20250821T074336Z-1-001/InventoryElement/back_point.png" id="7_ubhse"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_36t6j"]
+size = Vector2(11.6331, 10.6282)
+
+[sub_resource type="LabelSettings" id="LabelSettings_36t6j"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wuacb"]
+size = Vector2(45, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1veoc"]
+size = Vector2(120, 120)
+
+[node name="safe_puzzle" type="CanvasLayer"]
+script = ExtResource("1_6fq24")
+inv = ExtResource("2_lr0nq")
+item2 = ExtResource("3_a6441")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+position = Vector2(630, 305)
+scale = Vector2(0.711176, 0.711176)
+texture = ExtResource("4_lawpr")
+
+[node name="UP_1" type="Area2D" parent="Node2D"]
+position = Vector2(64, 17)
+scale = Vector2(1.00593, 1.01415)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/UP_1"]
+position = Vector2(590.498, 258.344)
+scale = Vector2(2.28, 2.28)
+shape = SubResource("RectangleShape2D_36t6j")
+
+[node name="Down_1" type="Area2D" parent="Node2D"]
+position = Vector2(59, 219)
+scale = Vector2(1.00593, 1.01415)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Down_1"]
+position = Vector2(592.487, 165.656)
+scale = Vector2(2.28, 2.28)
+shape = SubResource("RectangleShape2D_36t6j")
+
+[node name="UP_2" type="Area2D" parent="Node2D"]
+position = Vector2(176, 20)
+scale = Vector2(1.00593, 1.01415)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/UP_2"]
+position = Vector2(548.746, 255.386)
+scale = Vector2(2.28, 2.28)
+shape = SubResource("RectangleShape2D_36t6j")
+
+[node name="Down_2" type="Area2D" parent="Node2D"]
+position = Vector2(177, 218)
+scale = Vector2(1.00593, 1.01415)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Down_2"]
+position = Vector2(546.758, 165.656)
+scale = Vector2(2.28, 2.28)
+shape = SubResource("RectangleShape2D_36t6j")
+
+[node name="Label_1" type="Label" parent="Node2D"]
+offset_left = 650.0
+offset_top = 307.0
+offset_right = 690.0
+offset_bottom = 352.0
+text = "0"
+label_settings = SubResource("LabelSettings_36t6j")
+
+[node name="Label_2" type="Label" parent="Node2D"]
+offset_left = 716.0
+offset_top = 307.0
+offset_right = 756.0
+offset_bottom = 352.0
+text = "0"
+label_settings = SubResource("LabelSettings_36t6j")
+
+[node name="open" type="Node2D" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="open"]
+position = Vector2(628, 307)
+scale = Vector2(0.711, 0.711)
+texture = ExtResource("5_6fq24")
+
+[node name="key_area" type="Area2D" parent="open"]
+
+[node name="Sprite2D" type="Sprite2D" parent="open/key_area"]
+position = Vector2(641, 354)
+scale = Vector2(0.843844, 0.843844)
+texture = ExtResource("6_udns1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="open/key_area"]
+position = Vector2(638, 347)
+rotation = -1.52935
+shape = SubResource("RectangleShape2D_wuacb")
+
+[node name="Close" type="Area2D" parent="."]
+position = Vector2(1023, 110)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Close"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_1veoc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Close"]
+texture = ExtResource("7_ubhse")
+
+[connection signal="input_event" from="Node2D/UP_1" to="." method="_on_up_1_input_event"]
+[connection signal="input_event" from="Node2D/Down_1" to="." method="_on_down_1_input_event"]
+[connection signal="input_event" from="Node2D/UP_2" to="." method="_on_up_2_input_event"]
+[connection signal="input_event" from="Node2D/Down_2" to="." method="_on_down_2_input_event"]
+[connection signal="input_event" from="open/key_area" to="." method="_on_key_area_input_event"]
+[connection signal="input_event" from="Close" to="." method="_on_close_input_event"]

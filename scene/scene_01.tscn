@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://51m1mtvk702m"]
+[gd_scene load_steps=15 format=3 uid="uid://51m1mtvk702m"]
 
 [ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="1_fa0a0"]
 [ext_resource type="Script" uid="uid://cs5wykwgnomaq" path="res://scripts/scene_01.gd" id="1_yxmi1"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dn5oirvy0q4fn" path="res://assets/Scene/Office/CL.png" id="4_q5khp"]
 [ext_resource type="PackedScene" uid="uid://11rgeutrxc2h" path="res://scene/player_ui.tscn" id="7_n6d8w"]
 [ext_resource type="PackedScene" uid="uid://gnnr42htktvo" path="res://scene/Puzzle_Code_linshuck.tscn" id="7_tkgvv"]
+[ext_resource type="PackedScene" uid="uid://deiyjxc7bkwx7" path="res://scene/flashlight.tscn" id="9_q5khp"]
+[ext_resource type="PackedScene" uid="uid://dkpd0rjr5pucu" path="res://scene/tutorial.tscn" id="10_ggas2"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ak66w"]
 vertices = PackedVector2Array(2189.55, 664.992, 2302.44, 723.656, 116.141, 706.172, 155.477, 662)
@@ -81,6 +83,13 @@ position = Vector2(2182, 401)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="light"]
 position = Vector2(11, 6)
 shape = SubResource("RectangleShape2D_8u3hr")
+
+[node name="flashlight" parent="." instance=ExtResource("9_q5khp")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.0116734, 0.0233335, 0.0349918, 1)
+
+[node name="Tutorial" parent="." instance=ExtResource("10_ggas2")]
 
 [connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
 [connection signal="input_event" from="linShuck" to="." method="_on_lin_shuck_input_event"]

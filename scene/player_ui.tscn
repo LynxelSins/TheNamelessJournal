@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://11rgeutrxc2h"]
 
 [ext_resource type="Script" uid="uid://cvr4tqmt5748h" path="res://inventory/player_ui.gd" id="1_6n5fa"]
+[ext_resource type="Texture2D" uid="uid://cejda81obbn3h" path="res://assets/InventoryElement-20250821T074336Z-1-001/Inventory_black_nonBG.png" id="2_6n5fa"]
 [ext_resource type="PackedScene" uid="uid://coojlebwp3fck" path="res://inventory/inventory.tscn" id="2_u2m4h"]
-[ext_resource type="Texture2D" uid="uid://m3yl5shrc7rm" path="res://icon.svg" id="3_yoqii"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p8a8i"]
 size = Vector2(128, 130)
@@ -14,7 +14,9 @@ script = ExtResource("1_6n5fa")
 position = Vector2(77, 71)
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = ExtResource("3_yoqii")
+position = Vector2(-4, -5)
+scale = Vector2(0.254, 0.254)
+texture = ExtResource("2_6n5fa")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-1, -1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c06g7vd8ewvtt"]
+[gd_scene load_steps=21 format=3 uid="uid://c06g7vd8ewvtt"]
 
 [ext_resource type="Texture2D" uid="uid://dx2stbf7286w1" path="res://assets/Scene/stair/Background.png" id="1_l866t"]
 [ext_resource type="Script" uid="uid://1wbfq7fxl76t" path="res://scene/scene_03.gd" id="1_us35b"]
@@ -9,10 +9,13 @@
 [ext_resource type="Texture2D" uid="uid://dxf3gl86brbcf" path="res://assets/Scene/stair/OpenGateCurcuit.png" id="5_qlcl7"]
 [ext_resource type="Texture2D" uid="uid://dgefwkcje3pc4" path="res://assets/Scene/stair/UpStair.png" id="6_ilcnp"]
 [ext_resource type="Texture2D" uid="uid://dox373c2b3c2o" path="res://assets/Scene/stair/Lever.png" id="6_us35b"]
-[ext_resource type="Script" uid="uid://clcnrlwpkyxgv" path="res://scene/light_mouse.gd" id="9_nhi2m"]
+[ext_resource type="PackedScene" uid="uid://deiyjxc7bkwx7" path="res://scene/flashlight.tscn" id="10_reokw"]
 [ext_resource type="Texture2D" uid="uid://cn2f583lxj8rd" path="res://assets/Scene/stair/Gate.png" id="11_tkgci"]
 [ext_resource type="Script" uid="uid://brueffhq2ctfh" path="res://scene/monster.gd" id="12_mc8tj"]
-[ext_resource type="Texture2D" uid="uid://m3yl5shrc7rm" path="res://icon.svg" id="13_reokw"]
+[ext_resource type="Texture2D" uid="uid://codj8wba56yh" path="res://assets/charaters/Ghost1Picture/GhostSprint1.png" id="13_mc8tj"]
+[ext_resource type="Material" uid="uid://dpg6wwke48s0f" path="res://assets/shaders/chromaKeyShader.material" id="14_7s0nn"]
+[ext_resource type="VideoStream" uid="uid://w8sooq41yeh3" path="res://assets/video/foxy_jump.ogv" id="15_vr8oh"]
+[ext_resource type="PackedScene" uid="uid://bokx82wd4jwhx" path="res://scene/door.tscn" id="16_vr8oh"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_o8ty7"]
 vertices = PackedVector2Array(1487.03, 518, 1788.05, 519.992, 1851.94, 531.883, 1059.64, 526.992, 1026.84, 522.773, 640.422, 905.977, -9.78906, 910.531, 83.5313, 881, 602.656, 881, 633.867, 890.727, 1051.98, 529.156, 1026.87, 522.797, 1118.5, 1281.04, 1119.45, 1239.45, 1122.87, 1277, 1867.72, 1289.92, 1793.36, 1277, 1869.06, 1287.09)
@@ -21,9 +24,6 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(1064, 532, 650, 890, 11
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q8erj"]
 size = Vector2(67, 66)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ilcnp"]
-radius = 110.47
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mc8tj"]
 radius = 48.0
@@ -51,7 +51,7 @@ texture = ExtResource("3_qp83f")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_qlcl7")]
 z_index = 1
-position = Vector2(1140, 274)
+position = Vector2(1101, 277)
 scale = Vector2(0.7, 0.7)
 
 [node name="PointLight2D2" type="PointLight2D" parent="CharacterBody2D"]
@@ -105,19 +105,11 @@ texture = ExtResource("6_us35b")
 position = Vector2(962.5, 136)
 shape = SubResource("RectangleShape2D_q8erj")
 
+[node name="flashlight" parent="." groups=["Light"] instance=ExtResource("10_reokw")]
+position = Vector2(348, 221)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.00451714, 0.00904128, 0.0124639, 1)
-
-[node name="light_mouse" type="Area2D" parent="." groups=["Light"]]
-position = Vector2(348, 221)
-script = ExtResource("9_nhi2m")
-
-[node name="PointLight2D" type="PointLight2D" parent="light_mouse"]
-energy = 0.85
-texture = ExtResource("3_qp83f")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="light_mouse"]
-shape = SubResource("CircleShape2D_ilcnp")
 
 [node name="door" type="Area2D" parent="."]
 
@@ -134,7 +126,9 @@ position = Vector2(759, 214)
 script = ExtResource("12_mc8tj")
 
 [node name="Sprite2D" type="Sprite2D" parent="monster"]
-texture = ExtResource("13_reokw")
+position = Vector2(39, -76)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_mc8tj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="monster"]
 position = Vector2(0, -30)
@@ -143,9 +137,24 @@ shape = SubResource("CapsuleShape2D_7s0nn")
 [node name="Timer" type="Timer" parent="monster"]
 autostart = true
 
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="monster"]
+material = ExtResource("14_7s0nn")
+offset_left = -759.0
+offset_top = -214.0
+offset_right = 521.0
+offset_bottom = 506.0
+scale = Vector2(2.49725, 2.49725)
+stream = ExtResource("15_vr8oh")
+volume_db = 24.0
+
+[node name="door2" parent="." instance=ExtResource("16_vr8oh")]
+position = Vector2(1183, -436)
+next_scene = "res://scene/scene_02.tscn"
+
 [connection signal="input_event" from="switch" to="." method="_on_switch_input_event"]
 [connection signal="mouse_exited" from="switch" to="." method="_on_switch_mouse_exited"]
 [connection signal="body_entered" from="door" to="." method="_on_door_body_entered"]
 [connection signal="area_entered" from="monster" to="." method="_on_monster_area_entered"]
 [connection signal="area_exited" from="monster" to="." method="_on_monster_area_exited"]
 [connection signal="timeout" from="monster/Timer" to="monster" method="_on_timer_timeout"]
+[connection signal="finished" from="monster/VideoStreamPlayer" to="monster" method="_on_video_stream_player_finished"]

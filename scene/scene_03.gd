@@ -4,13 +4,13 @@ var is_mouse_held_down_on_shape = false
 @onready var lever = $switch/lever
 @onready var gate = $door/Sprite2D
 @onready var gate_start_pos = gate.position
-@onready var light = $light_mouse/PointLight2D
+
 @onready var light_player = $CharacterBody2D/PointLight2D2
 @onready var light_door = $PointLight2D2
-@export var next_scene : String
+@export var next_scene : String = "res://scene/scene_04.tscn"
 
 var gate_final_pose = Vector2(1226.0,110.0)
-var open_speed: float = 20 #you determine
+var open_speed: float = 50 #you determine 20
 var close_speed: float = 25 # you determine
 var lever_speed: float = 8.0 #not use. ai slope did this
 
@@ -23,8 +23,10 @@ func _ready() -> void:
 		opened_the_gate()
 	if GameStateManager.Stair_From_Scene_4:
 		GameStateManager.Stair_From_Scene_4 = false
-		$CharacterBody2D.position = Vector2(1159.0,663.0)
-		$CharacterBody2D.destination = Vector2(1159.0,663.0)
+		$CharacterBody2D.position = Vector2(1101.0,663.0)
+		$CharacterBody2D.destination = Vector2(1101.0,663.0)
+	
+		
 #maybe the lever box. idk , ai did this
 func _on_switch_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -47,12 +49,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	#flashlight flicker
-	flicker_timer -= delta
-	if flicker_timer <= 0.0:
-		light.energy = randf_range(0.6,0.8)
-		light_player.energy = randf_range(0.2,0.23)
-		light_door.energy = randf_range(0.2,0.23)
-		flicker_timer = flicker_delay  # reset timer
+	
 		
 	# This is the core logic that runs every frame, handle lever animation and gate open ani
 	if is_mouse_held_down_on_shape && gate.position != gate_final_pose:
@@ -79,7 +76,7 @@ func _on_monster_area_exited(area: Area2D) -> void:
 #after the gate fully open. aka finished the minigame
 func opened_the_gate():
 	$monster.finish()
-	light.visible = false
+	
 	light_player.visible = false
 	light_door.visible = false
 	$CanvasModulate.visible = false
@@ -90,6 +87,6 @@ func opened_the_gate():
 
 
 func _on_door_body_entered(body: Node2D) -> void:
-	if body.is_in_group("Player"):
+	if body.is_in_group("Player") && GameStateManager.is_stair_finish:
 		SceneTransition.load_scene(next_scene)
 	

@@ -1,0 +1,17 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://gkotrepfrsot"]
+
+[ext_resource type="Texture2D" uid="uid://4fawkgwulaok" path="res://assets/shaders/testShader.png" id="1_v17rw"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_1gcb4"]
+texture = ExtResource("1_v17rw")
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+"
+nodes/fragment/0/position = Vector2(640, 180)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_1gcb4")
+nodes/fragment/2/position = Vector2(80, 220)
