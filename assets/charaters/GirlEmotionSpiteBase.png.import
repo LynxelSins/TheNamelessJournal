@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csjegj4cwn4gs"
-path="res://.godot/imported/GirlEmotionSpiteShocked_OpenMount.png-1137f47230a36643afea1ef64d3cc570.ctex"
+uid="uid://cfafxg85ewkc0"
+path="res://.godot/imported/GirlEmotionSpiteBase.png-db5c01809d501d432eb61390131a4ae6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GirlEmotionSpiteShocked_OpenMount.png"
-dest_files=["res://.godot/imported/GirlEmotionSpiteShocked_OpenMount.png-1137f47230a36643afea1ef64d3cc570.ctex"]
+source_file="res://assets/charaters/GirlEmotionSpiteBase.png"
+dest_files=["res://.godot/imported/GirlEmotionSpiteBase.png-db5c01809d501d432eb61390131a4ae6.ctex"]
 
 [params]
 

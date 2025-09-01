@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1s472imh6006"
-path="res://.godot/imported/GirlEmotionSpiteSideGaze.png-8f9de9012704dfabb1b76c9f74ccd6e9.ctex"
+uid="uid://dwaksa46wn8xp"
+path="res://.godot/imported/GirlEmotionSpiteClose_Eyes.png-0414438568b3fab5549cdf9afb496e6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GirlEmotionSpiteSideGaze.png"
-dest_files=["res://.godot/imported/GirlEmotionSpiteSideGaze.png-8f9de9012704dfabb1b76c9f74ccd6e9.ctex"]
+source_file="res://assets/charaters/GirlEmotionSpiteClose_Eyes.png"
+dest_files=["res://.godot/imported/GirlEmotionSpiteClose_Eyes.png-0414438568b3fab5549cdf9afb496e6d.ctex"]
 
 [params]
 

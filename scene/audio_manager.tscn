@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://dn01w1rm7nn5g"]
 
-[ext_resource type="Script" uid="uid://dt5kcy4srcie3" path="res://audio_manager.gd" id="1_utgtw"]
+[ext_resource type="Script" uid="uid://dt5kcy4srcie3" path="res://scripts/audio_manager.gd" id="1_utgtw"]
 [ext_resource type="AudioStream" uid="uid://b7srx8ee6o4o2" path="res://Sound effect for Project/jump-scares.wav" id="2_dpj13"]
 [ext_resource type="AudioStream" uid="uid://byno1f646noh4" path="res://Sound effect for Project/ช็อตไฟฟ้า1.wav" id="3_kdpne"]
 [ext_resource type="AudioStream" uid="uid://cn8b622c44caj" path="res://Sound effect for Project/ประตูเหล็กดึงขึ้นลงตามอาคาร.wav" id="4_ttbfq"]
