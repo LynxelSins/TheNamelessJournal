@@ -28,9 +28,11 @@
 ### **ตัวละคร**
 Player : นักศึกษานิติศาสตร์
 
+<img src="https://github.com/LynxelSins/TheNamelessJournal/blob/2b38eb09a6420f036f0239ef69cf97c04b5725d6/CharacterImage/Player/GirlEmotionSpiteBase.png" alt="GitHub logo" width="200">
 
 Enemy : วิญญาณนักศึกษา
 
+<img src="https://github.com/LynxelSins/TheNamelessJournal/blob/2b38eb09a6420f036f0239ef69cf97c04b5725d6/CharacterImage/Ghost/GhostIdle.png" alt="GitHub logo" width="200">
 
 
 ### **รูปแบบการเล่น และ กติกา**
