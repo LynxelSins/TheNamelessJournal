@@ -3,7 +3,9 @@ extends Control
 
 func _ready() -> void:
 	#global stuff
+	AudioManager.audio_before_start.play()
 	GameStateManager.is_flashlight_enable = false
+	AudioManager.audio_while_game.stop()
 
 
 	#scene no.1 stuff
@@ -45,4 +47,6 @@ func _ready() -> void:
 
 
 func _on_button_button_down() -> void:
+	AudioManager.audio_before_start.stop()
+	AudioManager.audio_while_game.play()
 	SceneTransition.load_scene("res://scene/scene_01.tscn")

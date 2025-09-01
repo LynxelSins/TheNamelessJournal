@@ -15,8 +15,10 @@ func _ready():
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Inventory"):
 		if !is_open:
+			AudioManager.open_inv.play()
 			open()
 		else:
+			AudioManager.close_inv.play()
 			close()	
 	
 func update_display_item(item):
@@ -45,6 +47,7 @@ func close():
 
 func _on_back_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("ui_leftMouseClick"):
+		AudioManager.close_inv.play()
 		close()
 
 

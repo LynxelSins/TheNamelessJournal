@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dcd1sjm7rnd0b"
+path="res://.godot/imported/พวงกุญแจ.wav-4730c19dcafef266180df50b518196e6.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/พวงกุญแจ.wav"
+dest_files=["res://.godot/imported/พวงกุญแจ.wav-4730c19dcafef266180df50b518196e6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

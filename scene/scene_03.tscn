@@ -108,9 +108,6 @@ shape = SubResource("RectangleShape2D_q8erj")
 [node name="flashlight" parent="." groups=["Light"] instance=ExtResource("10_reokw")]
 position = Vector2(348, 221)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-color = Color(0.00451714, 0.00904128, 0.0124639, 1)
-
 [node name="door" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="door"]
@@ -146,6 +143,10 @@ offset_bottom = 506.0
 scale = Vector2(2.49725, 2.49725)
 stream = ExtResource("15_vr8oh")
 volume_db = 24.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="monster"]
+position = Vector2(-759, -214)
+color = Color(0.00451714, 0.00904128, 0.0124639, 1)
 
 [node name="door2" parent="." instance=ExtResource("16_vr8oh")]
 position = Vector2(1183, -436)

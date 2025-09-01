@@ -10,6 +10,7 @@ var is_door = false
 
 
 func _ready() -> void:
+	AudioManager.close_door.play()
 	player.is_levelable = false
 	if GameStateManager.is_Storage_light:
 		$CanvasModulate.visible = false
@@ -28,6 +29,7 @@ func _process(delta: float) -> void:
 	else:
 		if locker.get_current_code() == "2317":
 			locker.code_correct()
+			AudioManager.open_iron_Locker.play()
 			GameStateManager.is_Storage_locker_opened = true
 
 func _on_light_switch_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -36,9 +38,11 @@ func _on_light_switch_input_event(viewport: Node, event: InputEvent, shape_idx: 
 			await  get_tree().process_frame
 		if !$CanvasModulate.visible:
 			$CanvasModulate.visible = true
+			AudioManager.switch_light_on.play()
 			GameStateManager.is_Storage_light = false
 		else:
 			$CanvasModulate.visible = false
+			AudioManager.light_switch.play()
 			GameStateManager.is_Storage_light = true
 
 

@@ -2,4 +2,7 @@ extends CanvasLayer
 
 
 func _ready() -> void:
-	$AnimationPlayer.play("start_up")
+	if !GameStateManager.is_tutorial_done:
+		$AnimationPlayer.play("start_up")
+	else:
+		visible = false

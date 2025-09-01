@@ -69,9 +69,9 @@ func _on_timer_timeout() -> void:
 			else:
 				this_sprite.flip_h = true
 		else:
-			pass
-			#$VideoStreamPlayer.loop = false
-			#$VideoStreamPlayer.play()
+			
+			play_video_then_quit()
+
 			
 	elif is_light && randi() %3 +1 == 1:
 		if curr_pos > 0: # Safer check
@@ -92,6 +92,19 @@ func finish():
 	$Timer.stop()
 	visible = false
 	$CollisionShape2D.disabled
+	
+func play_video_then_quit():
+	$VideoStreamPlayer.loop = false
+	$VideoStreamPlayer.play()
+	$CanvasModulate.visible = false
+	
+	# The key change is here:
+	# 'await' tells the function to PAUSE at this line...
+	# ...until the timer's 'timeout' signal is received.
+	await get_tree().create_timer(3.0).timeout
+	
+	# This line will ONLY be executed after the 5-second wait is over.
+	get_tree().quit()
 
 
 func _on_video_stream_player_finished() -> void:

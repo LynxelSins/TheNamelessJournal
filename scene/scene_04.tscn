@@ -51,6 +51,7 @@ inv = ExtResource("2_fa555")
 note2 = ExtResource("3_bxo2k")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_pifa7")]
+visible = false
 z_index = 1
 position = Vector2(112, 591)
 scale = Vector2(0.7, 0.7)
@@ -105,6 +106,7 @@ position = Vector2(841, 57)
 texture = ExtResource("10_mw1ru")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0117647, 0.0235294, 0.0352941, 1)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
