@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cieyoewq2kf5p"
+path="res://.godot/imported/เสียงเดิน.wav-d44c98d603f135dfbb800f754dd1234a.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/เสียงเดิน.wav"
+dest_files=["res://.godot/imported/เสียงเดิน.wav-d44c98d603f135dfbb800f754dd1234a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

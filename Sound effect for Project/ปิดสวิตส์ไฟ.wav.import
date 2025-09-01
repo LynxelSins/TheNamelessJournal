@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfl70bk5emp55"
+path="res://.godot/imported/ปิดสวิตส์ไฟ.wav-e8bf90875d4a9ba027173fc1dacb6fef.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/ปิดสวิตส์ไฟ.wav"
+dest_files=["res://.godot/imported/ปิดสวิตส์ไฟ.wav-e8bf90875d4a9ba027173fc1dacb6fef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

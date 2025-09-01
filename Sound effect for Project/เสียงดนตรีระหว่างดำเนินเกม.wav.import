@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgvt158ixduw4"
+path="res://.godot/imported/เสียงดนตรีระหว่างดำเนินเกม.wav-281652a31dd7074f4b7d620cd30bfe48.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/เสียงดนตรีระหว่างดำเนินเกม.wav"
+dest_files=["res://.godot/imported/เสียงดนตรีระหว่างดำเนินเกม.wav-281652a31dd7074f4b7d620cd30bfe48.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

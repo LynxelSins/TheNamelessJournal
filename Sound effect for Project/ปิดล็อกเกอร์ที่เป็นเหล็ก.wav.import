@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://v84r21v70xut"
+path="res://.godot/imported/ปิดล็อกเกอร์ที่เป็นเหล็ก.wav-5174c76a90a2ae35170035c31e71b65b.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/ปิดล็อกเกอร์ที่เป็นเหล็ก.wav"
+dest_files=["res://.godot/imported/ปิดล็อกเกอร์ที่เป็นเหล็ก.wav-5174c76a90a2ae35170035c31e71b65b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

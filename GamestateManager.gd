@@ -13,6 +13,7 @@ var Office_puzzle_slot_4 = 0
 var Office_Linchuck_open = false
 var Office_noteTaken = false
 var Office_From_Scene_2 = false
+var is_tutorial_done = false
 
 
 #scene no.2 stuff
@@ -30,6 +31,7 @@ var is_safe_scene_4_opened = false
 var is_safe_key_scene_4_takend = false
 var is_light_scene_4 = false
 var is_scene_4_storage_opened = false
+var is_scene_4 = false
 
 #scene no.5 stuff
 var is_Storage_light = false

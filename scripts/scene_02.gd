@@ -21,4 +21,5 @@ func _on_note_1_input_event(viewport: Node, event: InputEvent, shape_idx: int) -
 			await  get_tree().process_frame
 		inv.insert(note_1)	
 		$note_1.visible = false
+		AudioManager.paper.play()
 		GameStateManager.Corridor_NoteTaken = true

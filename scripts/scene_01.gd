@@ -1,12 +1,14 @@
 extends Control
 
 
-@onready var LinChuck = $CanvasLayer
+@onready var LinChuck = $puzzle
 @onready var player = $CharacterBody2D
 @export var lighttexture: Texture2D
 
 
 func _ready() -> void:
+	if GameStateManager.is_tutorial_done:
+		AudioManager.close_door.play()
 	$CharacterBody2D.is_levelable = false
 	if GameStateManager.Office_Light:
 		$Scene/Background.texture = lighttexture
@@ -22,7 +24,12 @@ func _ready() -> void:
 
 func _on_lin_shuck_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event.is_action_pressed("ui_leftMouseClick"):
-		wait_for_destination()
+		print("clicked")
+		while not player.get_is_destination():
+			await get_tree().process_frame
+		player.setMoveable(false)
+		AudioManager.open_linshuck.play()
+		LinChuck.set_visible(true)
 
 func _process(delta: float) -> void:
 	if !LinChuck.visible:
@@ -30,6 +37,7 @@ func _process(delta: float) -> void:
 	else:
 		if LinChuck.get_current_code() == "6210":
 			LinChuck.code_correct()
+			AudioManager.open_linshuck.play()
 			GameStateManager.Office_Linchuck_open = true
 	
 func wait_for_destination():
@@ -47,4 +55,5 @@ func _on_light_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 		$Scene/Background.texture = lighttexture
 		$CharacterBody2D.modulate = Color("#ffffff")
 		$CanvasModulate.visible = false
+		AudioManager.switch_light_on.play()
 		GameStateManager.Office_Light = true

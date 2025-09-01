@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6vt2njaomds"
+path="res://.godot/imported/เปิดสวิตส์ไฟ.wav-d78ba3ca05e89d6212e9c3d6b0ab2613.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/เปิดสวิตส์ไฟ.wav"
+dest_files=["res://.godot/imported/เปิดสวิตส์ไฟ.wav-d78ba3ca05e89d6212e9c3d6b0ab2613.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

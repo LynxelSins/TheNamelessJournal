@@ -17,10 +17,12 @@ func _process(delta: float) -> void:
 	position = get_global_mouse_position()
 	if Input.is_action_just_pressed("flashlight_button"):
 		if !GameStateManager.is_flashlight_enable:
+			AudioManager.switch_light_on.play()
 			GameStateManager.is_flashlight_enable = true
 			light.visible = true
 		else: 
 			GameStateManager.is_flashlight_enable = false
+			AudioManager.light_switch.play()
 			light.visible = false
 	
 	

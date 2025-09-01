@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmb86h8fvq7ky"
+path="res://.godot/imported/ปิดลิ้นชัก.wav-143b1700e58d18e0fd57708f88b1780f.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/ปิดลิ้นชัก.wav"
+dest_files=["res://.godot/imported/ปิดลิ้นชัก.wav-143b1700e58d18e0fd57708f88b1780f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

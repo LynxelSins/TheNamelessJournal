@@ -9,4 +9,6 @@ extends Area2D
 ## to next scene
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		GameStateManager.is_tutorial_done = true
+		AudioManager.open_door.play()
 		SceneTransition.load_scene(next_scene)

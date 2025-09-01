@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmywgwnkm4qsg"
+path="res://.godot/imported/รูดซิปกระเป๋า.wav-54c9b135f6f6911c1a4e85140a29807f.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/รูดซิปกระเป๋า.wav"
+dest_files=["res://.godot/imported/รูดซิปกระเป๋า.wav-54c9b135f6f6911c1a4e85140a29807f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

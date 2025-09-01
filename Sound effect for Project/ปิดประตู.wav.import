@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bk1w733i8isay"
+path="res://.godot/imported/ปิดประตู.wav-bb003694ea5d02e1428f59b62aa7b6be.sample"
+
+[deps]
+
+source_file="res://Sound effect for Project/ปิดประตู.wav"
+dest_files=["res://.godot/imported/ปิดประตู.wav-bb003694ea5d02e1428f59b62aa7b6be.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

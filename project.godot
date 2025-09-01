@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 SceneTransition="*res://scene/SceneTransition.tscn"
 GameStateManager="*res://GamestateManager.gd"
+AudioManager="*res://scene/audio_manager.tscn"
 
 [display]
 
