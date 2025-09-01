@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cf8qsq1kgo3d0"
-path="res://.godot/imported/GirlEmotionSpiteBase_OpenMount.png-d42ee1ed190f7d91417bddab65a64377.ctex"
+path="res://.godot/imported/GirlEmotionSpiteBase_OpenMount.png-d3bb872fd189665ed3f1337a5d155a4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GirlEmotionSpiteBase_OpenMount.png"
-dest_files=["res://.godot/imported/GirlEmotionSpiteBase_OpenMount.png-d42ee1ed190f7d91417bddab65a64377.ctex"]
+source_file="res://assets/charaters/GirlEmotionSpiteBase_OpenMount.png"
+dest_files=["res://.godot/imported/GirlEmotionSpiteBase_OpenMount.png-d3bb872fd189665ed3f1337a5d155a4b.ctex"]
 
 [params]
 
