@@ -152,6 +152,9 @@ Enemy : วิญญาณนักศึกษา
 1. https://pixabay.com/th/
 
 
+**ทดลองเล่นเกมได้ที่:** https://lynxelsins.github.io/TheNamelessJournal/
+
+
 
 
 
