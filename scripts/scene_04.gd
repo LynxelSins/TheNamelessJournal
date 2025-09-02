@@ -54,11 +54,14 @@ func _on_door_right_input_event(viewport: Node, event: InputEvent, shape_idx: in
 	if event.is_action_pressed("ui_leftMouseClick"):
 		if $"player UI/Inventory".find_item_by_name("storageRoom key") != -1:
 			$"player UI/Inventory".remove_item_by_name("storageRoom key")
+			GameStateManager.is_door_right_opened = true
+			AudioManager.keychain.play()
+		else:
+			print("nah")
+		if GameStateManager.is_door_right_opened:
 			SceneTransition.load_scene("res://scene/scene_05.tscn")
 			GameStateManager.is_scene_4 = false
 			AudioManager.open_door.play()
-		else:
-			print("nah")
 
 
 func _on_door_left_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
