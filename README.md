@@ -134,13 +134,34 @@ Enemy : วิญญาณนักศึกษา
 
 <img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/main/assets/video/Preveiw/Screenshot_20250902_194929.png?raw=true" style="width: 80%; height: auto;"/>
  
-หน้า scene แรก
+ฉากแรก ฉากห้องทำงาน
 
 <img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/main/assets/video/Preveiw/Screenshot_20250902_195014.png?raw=true" style="width: 80%; height: auto;"/>
 
-แสดงหน้าตัวอย่างการเล่น และ คำอธิบาย อย่างน้อย 3 หน้า
-		
+ฉากทางเดิน
+
+
+ฉากบันได
+
+
+ฉากโถงด้านหน้า
+
+
+ฉากห้องเก็บของ
+
+
+กระเป๋า
+
+  
 **Win**
+
+ฉากจบที่ 1 “วนซ้ำ”
+
+
+ฉากจบที่ 2 “คนต่อไปคือเธอ”
+
+
+ฉากจบที่ 3 “ฉันได้ยินเสียงเธอแล้ว”
 
 **Game Over**
 
