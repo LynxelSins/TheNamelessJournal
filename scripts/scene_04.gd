@@ -19,6 +19,9 @@ func _ready() -> void:
 			
 	if GameStateManager.is_light_scene_4:
 		light_on()
+	if GameStateManager.is_scene_4_note_taken:
+		$note/Sprite2D.visible = false
+		$note/CollisionShape2D.disabled = true
 	
 	
 	
@@ -89,6 +92,7 @@ func _on_note_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 		inv.insert(note2)
 		$note/Sprite2D.visible = false
 		$note/CollisionShape2D.disabled = true
+		GameStateManager.is_scene_4_note_taken = true
 
 
 func _on_safe_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

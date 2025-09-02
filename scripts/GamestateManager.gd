@@ -35,6 +35,7 @@ var is_safe_key_scene_4_takend = false
 var is_light_scene_4 = false
 var is_scene_4_storage_opened = false
 var is_scene_4 = false
+var is_scene_4_note_taken = false
 
 #scene no.5 stuff
 var is_Storage_light = false

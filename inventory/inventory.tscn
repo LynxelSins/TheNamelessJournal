@@ -117,7 +117,7 @@ offset_left = -65.3845
 offset_top = 297.115
 offset_right = 269.615
 offset_bottom = 477.115
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 20
 label_settings = SubResource("LabelSettings_ho8i8")
 autowrap_mode = 3
 
