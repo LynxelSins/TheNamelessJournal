@@ -8,10 +8,11 @@ var is_mouse_held_down_on_shape = false
 @onready var light_player = $CharacterBody2D/PointLight2D2
 @onready var light_door = $PointLight2D2
 @export var next_scene : String = "res://scene/scene_04.tscn"
+@onready var monster = $monster
 
 var gate_final_pose = Vector2(1226.0,110.0)
-var open_speed: float = 15 #you determine 15
-var close_speed: float = 25 # you determine
+var open_speed: float = 7 #you determine 15
+var close_speed: float = 10 # you determine
 var lever_speed: float = 8.0 #not use. ai slope did this
 var is_door_sound_playing = false
 
@@ -19,6 +20,7 @@ var flicker_timer := 0.0
 var flicker_delay := 0.08  
 
 func _ready() -> void:
+	monster.connect("stair_end", _on_stair_end)
 	$CharacterBody2D.is_levelable = true
 	if GameStateManager.is_stair_finish:
 		opened_the_gate()
@@ -112,12 +114,15 @@ func opened_the_gate():
 	
 	light_player.visible = false
 	light_door.visible = false
+	gate.position = gate_final_pose
 	$monster/CanvasModulate.visible = false
 	GameStateManager.is_stair_finish = true
 
 
 
-
+func _on_stair_end():
+	GameStateManager.is_loop_ending = true
+	opened_the_gate()
 
 func _on_door_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player") && GameStateManager.is_stair_finish:

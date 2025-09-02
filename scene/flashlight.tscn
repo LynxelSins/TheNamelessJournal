@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://0yr4bhh7k6vr" path="res://assets/circle_05.png" id="2_ehlds"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t1int"]
-radius = 102.078
+radius = 98.0204
 
 [node name="flashlight" type="Area2D"]
 script = ExtResource("1_qao6e")
 
 [node name="light" type="PointLight2D" parent="."]
+position = Vector2(-3.8147e-06, -7.62939e-06)
+scale = Vector2(1.07813, 1.25613)
 texture = ExtResource("2_ehlds")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

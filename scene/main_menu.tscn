@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://xrdwqrd2gf26"]
+[gd_scene load_steps=3 format=3 uid="uid://xrdwqrd2gf26"]
 
 [ext_resource type="Script" uid="uid://b4qaq06jrhpkv" path="res://scripts/main_menu.gd" id="1_3er1b"]
+[ext_resource type="Texture2D" uid="uid://dh2ebws4vhlx5" path="res://assets/Start.png" id="2_hxu56"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +13,9 @@ grow_vertical = 2
 script = ExtResource("1_3er1b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(641.25, 346)
+scale = Vector2(0.838867, 0.748047)
+texture = ExtResource("2_hxu56")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -24,11 +28,11 @@ text = "Play"
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 168.0
-offset_top = 46.0
-offset_right = 1087.0
-offset_bottom = 306.0
+offset_left = 71.0
+offset_top = 77.0
+offset_right = 1224.0
+offset_bottom = 337.0
 theme_override_font_sizes/font_size = 110
-text = "Something"
+text = "The Nameless Journal"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

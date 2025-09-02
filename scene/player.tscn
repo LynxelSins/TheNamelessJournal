@@ -71,4 +71,3 @@ animation = &"idle"
 frame_progress = 0.269538
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-debug_enabled = true

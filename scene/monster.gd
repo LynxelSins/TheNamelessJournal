@@ -9,6 +9,7 @@ var pos4 = Vector2(533.0,348.0)
 var pos5 = Vector2(759.0,214.0)
 
 @onready var this_sprite = $Sprite2D
+signal stair_end
 
 
 var sprite : Array[String] = [
@@ -69,8 +70,8 @@ func _on_timer_timeout() -> void:
 			else:
 				this_sprite.flip_h = true
 		else:
-			
-			play_video_then_quit()
+			emit_signal("stair_end")
+			#play_video_then_quit()
 
 			
 	elif is_light && randi() %3 +1 == 1:
@@ -104,7 +105,7 @@ func play_video_then_quit():
 	await get_tree().create_timer(3.0).timeout
 	
 	# This line will ONLY be executed after the 5-second wait is over.
-	get_tree().quit()
+	SceneTransition.load_scene("res://scene/loopend.tscn")
 
 
 func _on_video_stream_player_finished() -> void:
