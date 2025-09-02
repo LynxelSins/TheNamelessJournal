@@ -165,18 +165,17 @@ Enemy : วิญญาณนักศึกษา
 <img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image10.png" style="width: 80%; height: auto;"/>
   
 **Win**
+ฉากจบที่ 1 “ฉันได้ยินเสียงเธอแล้ว”
 
-ฉากจบที่ 1 “วนซ้ำ”
-
-<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image11.png" style="width: 80%; height: auto;"/>
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image13.png" style="width: 80%; height: auto;"/>
 
 ฉากจบที่ 2 “คนต่อไปคือเธอ”
 
 <img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image14.png" style="width: 80%; height: auto;"/>
 
-ฉากจบที่ 3 “ฉันได้ยินเสียงเธอแล้ว”
+ฉากจบที่ 3 “วนซ้ำ”
 
-<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image13.png" style="width: 80%; height: auto;"/>
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image11.png" style="width: 80%; height: auto;"/>
 
 **Game Over**
 
