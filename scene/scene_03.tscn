@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://c06g7vd8ewvtt"]
 
 [ext_resource type="Texture2D" uid="uid://dx2stbf7286w1" path="res://assets/Scene/stair/Background.png" id="1_l866t"]
-[ext_resource type="Script" uid="uid://1wbfq7fxl76t" path="res://scene/scene_03.gd" id="1_us35b"]
+[ext_resource type="Script" uid="uid://1wbfq7fxl76t" path="res://scripts/scene_03.gd" id="1_us35b"]
 [ext_resource type="Texture2D" uid="uid://ch3k6tly1cdb1" path="res://assets/Scene/stair/Preveiw.png" id="2_pdc08"]
 [ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="3_qlcl7"]
 [ext_resource type="Texture2D" uid="uid://0yr4bhh7k6vr" path="res://assets/circle_05.png" id="3_qp83f"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dox373c2b3c2o" path="res://assets/Scene/stair/Lever.png" id="6_us35b"]
 [ext_resource type="PackedScene" uid="uid://deiyjxc7bkwx7" path="res://scene/flashlight.tscn" id="10_reokw"]
 [ext_resource type="Texture2D" uid="uid://cn2f583lxj8rd" path="res://assets/Scene/stair/Gate.png" id="11_tkgci"]
-[ext_resource type="Script" uid="uid://brueffhq2ctfh" path="res://scene/monster.gd" id="12_mc8tj"]
+[ext_resource type="Script" uid="uid://brueffhq2ctfh" path="res://scripts/monster.gd" id="12_mc8tj"]
 [ext_resource type="Texture2D" uid="uid://codj8wba56yh" path="res://assets/charaters/Ghost1Picture/GhostSprint1.png" id="13_mc8tj"]
 [ext_resource type="Material" uid="uid://dpg6wwke48s0f" path="res://assets/shaders/chromaKeyShader.material" id="14_7s0nn"]
 [ext_resource type="VideoStream" uid="uid://w8sooq41yeh3" path="res://assets/video/foxy_jump.ogv" id="15_vr8oh"]

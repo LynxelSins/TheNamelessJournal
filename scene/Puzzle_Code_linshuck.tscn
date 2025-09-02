@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://gnnr42htktvo"]
 
-[ext_resource type="Script" uid="uid://dkfrxl7q3sm6x" path="res://scene/puzzle_code_linshuckReal.gd" id="1_vctgn"]
+[ext_resource type="Script" uid="uid://dkfrxl7q3sm6x" path="res://scripts/puzzle_code_linshuckReal.gd" id="1_vctgn"]
 [ext_resource type="Texture2D" uid="uid://go246v4yx7b6" path="res://will_delete/ed3c8d51-ce2f-4975-9614-7c80a860da47.jpg" id="1_x714f"]
 [ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_r038g"]
 [ext_resource type="Resource" uid="uid://cn1tx4oepy471" path="res://inventory/items/keys/note_4.tres" id="3_mjuem"]

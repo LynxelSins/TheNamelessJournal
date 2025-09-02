@@ -7,5 +7,5 @@
 script = ExtResource("1_o7mh4")
 name = "frontdoor key"
 texture = ExtResource("2_hl3mk")
-description = "key"
+description = "a key to exit"
 metadata/_custom_type_script = "uid://715r5ve23vjf"

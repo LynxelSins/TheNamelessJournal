@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://b820bp0n7y6dk"]
+
+[ext_resource type="Script" uid="uid://c0eei28hxttqe" path="res://scripts/gameover.gd" id="1_igyxd"]
+[ext_resource type="Texture2D" uid="uid://dh2ebws4vhlx5" path="res://assets/Start.png" id="2_73nri"]
+
+[node name="Gameover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_igyxd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(641.25, 346)
+scale = Vector2(0.838867, 0.748047)
+texture = ExtResource("2_73nri")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 397.0
+offset_right = 924.0
+offset_bottom = 497.0
+theme_override_font_sizes/font_size = 30
+text = "Go back to Menu"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 77.0
+offset_right = 1224.0
+offset_bottom = 337.0
+theme_override_font_sizes/font_size = 110
+text = "Game Over"
+horizontal_alignment = 1
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

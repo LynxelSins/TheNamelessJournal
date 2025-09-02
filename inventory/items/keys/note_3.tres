@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_sl6ah")
-name = "บันทึกที่ 3 \"6210\""
+name = "Note 3 – “6210”"
 texture = ExtResource("2_f2wor")
-description = "ข้อความในบันทิก : ถ้าคุณอยากรูได้โปรดไปที่ห้องนั้น \"6210\""
+description = "Text in the note: If you want to know… please go to that room—“6210.”"
 metadata/_custom_type_script = "uid://715r5ve23vjf"

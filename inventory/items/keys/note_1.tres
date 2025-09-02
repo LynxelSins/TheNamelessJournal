@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_qtffo")
-name = "บันทึกที่ 1 “กระดาษสีขาว”"
+name = "Note 1 – “The White Paper”"
 texture = ExtResource("2_2o7d0")
-description = "ข้อความในบันทึก : คืนวันที่ 5 ตุลา พวกเรานัดรวมตัวกันที่ตึกนี้แล้ว ไฟในหอพักก็ดับ แต่เสียงจากโทรโข่งยังดังไม่หยุดมีคนเอากระดาษ สีขาวมาติดเต็มกําแพง เขียนแค่ตัวเลขเดียวว่า “13” พวกเราไม่ เข้าใจว่าคืออะไร แต่คืนนี้เราก็ยังคงตัดสินใจอยู่ต่อ “ขอแค่เขา เห็นพวกเรา ยังยืนอยู่ก็พอ”"
+description = "Text in the note: On the night of October 5th, we gathered in this building. The power in the dorm went out, yet the sound from the loudspeakers never stopped. Someone had plastered sheets of white paper all over the walls—each bearing only a single number: “13.”We didn’t understand what it meant, but we decided to stay that night anyway. “As long as he can see that we’re still standing here, that’s enough.”"
 metadata/_custom_type_script = "uid://715r5ve23vjf"
