@@ -44,6 +44,7 @@ func _ready() -> void:
 	GameStateManager.is_scene_4_storage_opened = false
 	GameStateManager.is_scene_4 = false 
 	GameStateManager.is_scene_4_note_taken = false
+	GameStateManager.is_door_right_opened = false
 
 	#scene no.5 stuff
 	GameStateManager.is_Storage_light = false
