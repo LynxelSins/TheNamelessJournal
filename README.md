@@ -138,32 +138,49 @@ Enemy : วิญญาณนักศึกษา
 
 <img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/main/assets/video/Preveiw/Screenshot_20250902_195014.png?raw=true" style="width: 80%; height: auto;"/>
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image2.png" style="width: 80%; height: auto;"/>
+
 ฉากทางเดิน
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image4.png" style="width: 80%; height: auto;"/>
 
 ฉากบันได
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image5.png" style="width: 80%; height: auto;"/>
+
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image6.png" style="width: 80%; height: auto;"/>
 
 ฉากโถงด้านหน้า
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image7.png" style="width: 80%; height: auto;"/>
+
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image8.png" style="width: 80%; height: auto;"/>
 
 ฉากห้องเก็บของ
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image9.png" style="width: 80%; height: auto;"/>
 
 กระเป๋า
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image10.png" style="width: 80%; height: auto;"/>
   
 **Win**
 
 ฉากจบที่ 1 “วนซ้ำ”
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image11.png" style="width: 80%; height: auto;"/>
 
 ฉากจบที่ 2 “คนต่อไปคือเธอ”
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image14.png" style="width: 80%; height: auto;"/>
 
 ฉากจบที่ 3 “ฉันได้ยินเสียงเธอแล้ว”
 
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image13.png" style="width: 80%; height: auto;"/>
+
 **Game Over**
+
+<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image12.png" style="width: 80%; height: auto;"/>
 
 **VDO**
 
