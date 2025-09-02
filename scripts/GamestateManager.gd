@@ -3,6 +3,7 @@ extends Node
 #global stuff
 var is_flashlight_enable = false
 var is_loop_ending = false
+var clear_inv = false
 
 
 #scene no.1 stuff

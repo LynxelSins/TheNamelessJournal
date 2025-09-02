@@ -20,6 +20,9 @@ func _process(delta: float) -> void:
 		else:
 			AudioManager.close_inv.play()
 			close()	
+	if GameStateManager.clear_inv:
+		clear_inventory()
+		GameStateManager.clear_inv = false
 	
 func update_display_item(item):
 	
@@ -125,3 +128,11 @@ func remove_item_by_name(item_name: String) -> bool:
 	# This code runs if the item was not found.
 	print("Could not remove '", item_name, "' because it was not in the inventory.")
 	return false # Indicate that no item was removed.
+	
+	
+func clear_inventory():
+	for i in range(inv.slots.size()):
+		inv.slots[i] = InvSlot.new()
+	# Update the UI to reflect the empty inventory.
+	update_slots()
+	print("All items removed from inventory.")
