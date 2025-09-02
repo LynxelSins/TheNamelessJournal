@@ -182,6 +182,7 @@ Enemy : วิญญาณนักศึกษา
 <img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/e8f40bd0e215120b71f1cff73e2543a6884d6b0f/assets/video/Preveiw/image12.png" style="width: 80%; height: auto;"/>
 
 **VDO**
+ https://youtu.be/qTQENqx99EQ 
 
 ### **อ้างอิง**
 **Sound and Music**
