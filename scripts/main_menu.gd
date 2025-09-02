@@ -6,6 +6,7 @@ func _ready() -> void:
 	AudioManager.audio_before_start.play()
 	GameStateManager.is_flashlight_enable = false
 	AudioManager.audio_while_game.stop()
+	GameStateManager.is_loop_ending = false
 
 
 	#scene no.1 stuff
@@ -17,6 +18,7 @@ func _ready() -> void:
 	GameStateManager.Office_Linchuck_open = false
 	GameStateManager.Office_noteTaken = false
 	GameStateManager.Office_From_Scene_2 = false
+	GameStateManager.is_tutorial_done = false
 
 
 	#scene no.2 stuff
@@ -26,6 +28,7 @@ func _ready() -> void:
 	#scene no.3 stuff
 	GameStateManager.is_stair_finish = false
 	GameStateManager.Stair_From_Scene_4 = false
+	GameStateManager.is_tutorial_stair_done = false
 
 	#scene no.4 stuff
 
@@ -34,6 +37,7 @@ func _ready() -> void:
 	GameStateManager.is_safe_key_scene_4_takend = false
 	GameStateManager.is_light_scene_4 = false
 	GameStateManager.is_scene_4_storage_opened = false
+	GameStateManager.is_scene_4 = false 
 
 	#scene no.5 stuff
 	GameStateManager.is_Storage_light = false

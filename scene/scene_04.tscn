@@ -1,6 +1,6 @@
 [gd_scene load_steps=24 format=3 uid="uid://cdcjhd4vo61j"]
 
-[ext_resource type="Script" uid="uid://d3phkbf7uotl0" path="res://scene/scene_04.gd" id="1_ajxqv"]
+[ext_resource type="Script" uid="uid://d3phkbf7uotl0" path="res://scripts/scene_04.gd" id="1_ajxqv"]
 [ext_resource type="PackedScene" uid="uid://bkgbtftggp812" path="res://scene/player.tscn" id="1_pifa7"]
 [ext_resource type="Texture2D" uid="uid://c8lbfjv7er24f" path="res://assets/Scene/hall/Hall.png" id="2_ajxqv"]
 [ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_fa555"]

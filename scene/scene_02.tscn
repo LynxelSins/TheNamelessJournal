@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://m3yl5shrc7rm" path="res://icon.svg" id="5_n5yns"]
 [ext_resource type="PackedScene" uid="uid://11rgeutrxc2h" path="res://scene/player_ui.tscn" id="6_46re4"]
 [ext_resource type="Texture2D" uid="uid://ccj6wbwul5n61" path="res://assets/Scene/Corridor/Note1.png" id="8_jemyb"]
-[ext_resource type="Script" uid="uid://uh0evtqdc60d" path="res://scene/stair.gd" id="11_6ykvm"]
+[ext_resource type="Script" uid="uid://uh0evtqdc60d" path="res://scripts/stair.gd" id="11_6ykvm"]
 [ext_resource type="PackedScene" uid="uid://deiyjxc7bkwx7" path="res://scene/flashlight.tscn" id="12_edmqn"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_5lygx"]

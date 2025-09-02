@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://b4p57l1owed2v"]
 
-[ext_resource type="Script" uid="uid://di68xrt6fw7v1" path="res://scene/locker_puzzle.gd" id="1_iaulu"]
+[ext_resource type="Script" uid="uid://di68xrt6fw7v1" path="res://scripts/locker_puzzle.gd" id="1_iaulu"]
 [ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_iaulu"]
 [ext_resource type="Resource" uid="uid://bxlqyundks6xy" path="res://inventory/items/keys/note_3.tres" id="3_fta2t"]
 [ext_resource type="Resource" uid="uid://b00x6ibqfc0ot" path="res://inventory/items/keys/key2.tres" id="4_iaulu"]

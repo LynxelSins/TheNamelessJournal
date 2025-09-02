@@ -113,20 +113,21 @@ position = Vector2(851.923, 133.654)
 position = Vector2(109.615, 99.0385)
 
 [node name="display_dis" type="Label" parent="display_item"]
-offset_left = -58.6537
-offset_top = 329.808
-offset_right = 276.346
-offset_bottom = 509.808
+offset_left = -65.3845
+offset_top = 297.115
+offset_right = 269.615
+offset_bottom = 477.115
 theme_override_font_sizes/font_size = 22
 label_settings = SubResource("LabelSettings_ho8i8")
 autowrap_mode = 3
 
 [node name="Item_name" type="Label" parent="display_item"]
-offset_left = 45.1924
-offset_top = 273.077
-offset_right = 85.1924
-offset_bottom = 296.077
+offset_left = -87.4999
+offset_top = 258.654
+offset_right = 299.5
+offset_bottom = 308.654
 theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel" to="." method="_on_panel_mouse_entered"]
 [connection signal="mouse_entered" from="NinePatchRect/GridContainer/Panel2" to="." method="_on_panel_2_mouse_entered"]

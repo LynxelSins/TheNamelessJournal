@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://djoxbjlqyvivl"]
 
-[ext_resource type="Script" uid="uid://ct6hj2i1yrxrf" path="res://scene/tutorial_stair.gd" id="1_l2thf"]
+[ext_resource type="Script" uid="uid://ct6hj2i1yrxrf" path="res://scripts/tutorial_stair.gd" id="1_l2thf"]
 
 [sub_resource type="Animation" id="Animation_nvmt1"]
 length = 0.001
