@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://xrdwqrd2gf26"]
+[gd_scene load_steps=4 format=3 uid="uid://xrdwqrd2gf26"]
 
 [ext_resource type="Script" uid="uid://b4qaq06jrhpkv" path="res://scripts/main_menu.gd" id="1_3er1b"]
+[ext_resource type="Resource" uid="uid://chkv1nrrklugy" path="res://inventory/items/player_inv.tres" id="2_2fwvj"]
 [ext_resource type="Texture2D" uid="uid://dh2ebws4vhlx5" path="res://assets/Start.png" id="2_hxu56"]
 
 [node name="MainMenu" type="Control"]
@@ -11,6 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3er1b")
+inv = ExtResource("2_2fwvj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(641.25, 346)
