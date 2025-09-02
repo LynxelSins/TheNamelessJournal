@@ -130,6 +130,7 @@ Enemy : วิญญาณนักศึกษา
 
 ### **หน้าเล่นเกม**
 หน้าเมนูเกม
+	<img src ="https://github.com/LynxelSins/TheNamelessJournal/blob/main/assets/video/Preveiw/Screenshot_20250902_194929.png?raw=true" style="width: 20%; height: auto;"/>
 หน้า scene แรก
 
 แสดงหน้าตัวอย่างการเล่น และ คำอธิบาย อย่างน้อย 3 หน้า
