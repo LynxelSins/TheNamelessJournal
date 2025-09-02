@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://c06g7vd8ewvtt"]
+[gd_scene load_steps=22 format=3 uid="uid://c06g7vd8ewvtt"]
 
 [ext_resource type="Texture2D" uid="uid://dx2stbf7286w1" path="res://assets/Scene/stair/Background.png" id="1_l866t"]
 [ext_resource type="Script" uid="uid://1wbfq7fxl76t" path="res://scene/scene_03.gd" id="1_us35b"]
@@ -16,6 +16,7 @@
 [ext_resource type="Material" uid="uid://dpg6wwke48s0f" path="res://assets/shaders/chromaKeyShader.material" id="14_7s0nn"]
 [ext_resource type="VideoStream" uid="uid://w8sooq41yeh3" path="res://assets/video/foxy_jump.ogv" id="15_vr8oh"]
 [ext_resource type="PackedScene" uid="uid://bokx82wd4jwhx" path="res://scene/door.tscn" id="16_vr8oh"]
+[ext_resource type="PackedScene" uid="uid://djoxbjlqyvivl" path="res://scene/tutorial_stair.tscn" id="17_lx2s4"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_o8ty7"]
 vertices = PackedVector2Array(1487.03, 518, 1788.05, 519.992, 1851.94, 531.883, 1059.64, 526.992, 1026.84, 522.773, 640.422, 905.977, -9.78906, 910.531, 83.5313, 881, 602.656, 881, 633.867, 890.727, 1051.98, 529.156, 1026.87, 522.797, 1118.5, 1281.04, 1119.45, 1239.45, 1122.87, 1277, 1867.72, 1289.92, 1793.36, 1277, 1869.06, 1287.09)
@@ -107,6 +108,7 @@ shape = SubResource("RectangleShape2D_q8erj")
 
 [node name="flashlight" parent="." groups=["Light"] instance=ExtResource("10_reokw")]
 position = Vector2(348, 221)
+scale = Vector2(0.598328, 0.556394)
 
 [node name="door" type="Area2D" parent="."]
 
@@ -151,6 +153,8 @@ color = Color(0.00451714, 0.00904128, 0.0124639, 1)
 [node name="door2" parent="." instance=ExtResource("16_vr8oh")]
 position = Vector2(1183, -436)
 next_scene = "res://scene/scene_02.tscn"
+
+[node name="Tutorial_stair" parent="." instance=ExtResource("17_lx2s4")]
 
 [connection signal="input_event" from="switch" to="." method="_on_switch_input_event"]
 [connection signal="mouse_exited" from="switch" to="." method="_on_switch_mouse_exited"]

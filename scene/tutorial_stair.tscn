@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkpd0rjr5pucu"]
+[gd_scene load_steps=5 format=3 uid="uid://djoxbjlqyvivl"]
 
-[ext_resource type="Script" uid="uid://b0gmchqj6vc7v" path="res://scripts/tutorial.gd" id="1_p31a4"]
+[ext_resource type="Script" uid="uid://ct6hj2i1yrxrf" path="res://scene/tutorial_stair.gd" id="1_l2thf"]
 
 [sub_resource type="Animation" id="Animation_nvmt1"]
 length = 0.001
@@ -87,21 +87,23 @@ _data = {
 &"start_up": SubResource("Animation_8jxoh")
 }
 
-[node name="Tutorial" type="CanvasLayer"]
-script = ExtResource("1_p31a4")
+[node name="Tutorial_stair" type="CanvasLayer"]
+script = ExtResource("1_l2thf")
 
 [node name="Label" type="RichTextLabel" parent="."]
 z_index = 1
-offset_left = 532.0
+offset_left = 312.0
 offset_top = 239.0
 offset_right = 930.0
 offset_bottom = 561.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 30
 text = "Tutorial
-F : for flashlight
-I : for invetory
+Click the lever to open the door
+
+Becareful of monster , but the light will scare them off
 "
+horizontal_alignment = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -117,3 +119,5 @@ color = Color(0, 0, 0, 1)
 libraries = {
 &"": SubResource("AnimationLibrary_won01")
 }
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

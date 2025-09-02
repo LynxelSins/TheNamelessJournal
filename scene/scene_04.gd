@@ -75,7 +75,13 @@ func _on_door_door_middle_input_event(viewport: Node, event: InputEvent, shape_i
 			GameStateManager.is_scene_4 = false
 			AudioManager.audio_while_game.stop()
 			AudioManager.open_door.play()
-			print("mid")
+			AudioManager.audio_while_game.stop()
+			if GameStateManager.Office_noteTaken && !GameStateManager.is_loop_ending:
+				SceneTransition.load_scene("res://scene/goodend.tscn")
+			elif !GameStateManager.Office_noteTaken && !GameStateManager.is_loop_ending:
+				SceneTransition.load_scene("res://scene/badend.tscn")
+			elif GameStateManager.is_loop_ending:
+				SceneTransition.load_scene("res://scene/loopend.tscn")
 
 
 func _on_note_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

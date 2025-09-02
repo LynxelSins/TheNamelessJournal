@@ -2,6 +2,7 @@ extends Node
 
 #global stuff
 var is_flashlight_enable = false
+var is_loop_ending = false
 
 
 #scene no.1 stuff
@@ -23,6 +24,7 @@ var Corridor_FromScene_3 = false
 #scene no.3 stuff
 var is_stair_finish = false
 var Stair_From_Scene_4 = false
+var is_tutorial_stair_done = false
 
 #scene no.4 stuff
 
