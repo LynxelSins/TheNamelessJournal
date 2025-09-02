@@ -28,6 +28,7 @@
 ### **ตัวละคร**
 Player : นักศึกษานิติศาสตร์
 
+<img src="https://github.com/LynxelSins/TheNamelessJournal/blob/74c05186c3f8779c25f496c2c0b61837328cdc52/CharacterImage/Player/GirlEmotionSpiteBase.png" alt="GitHub logo" width="200">
 
 Enemy : วิญญาณนักศึกษา
 
