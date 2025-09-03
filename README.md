@@ -189,6 +189,7 @@ Enemy : วิญญาณนักศึกษา
 
 1. https://pixabay.com/th/
 
+เอกสาร : https://docs.google.com/document/d/13LgXeaYszTDUQ-1raX0K2wxWV08ggpwKrbyOm-LJH5A/edit?usp=sharing
 
 ## **ทดลองเล่นเกมได้ที่:** https://lynxelsins.github.io/TheNamelessJournal/
 
